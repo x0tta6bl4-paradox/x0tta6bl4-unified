@@ -1,0 +1,17 @@
+{
+  "dashboard": {
+    "title": "x0tta6bl4 Unified Dashboard",
+    "panels": [
+      {
+        "title": "System Health",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "up",
+            "legendFormat": "Service Status"
+          }
+        ]
+      }
+    ]
+  }
+}
