@@ -1,0 +1,19 @@
+{
+  "source_projects": {
+    "x0tta6bl4": "/home/x0tta6bl4",
+    "x0tta6bl4_next": "/home/x0tta6bl4-next"
+  },
+  "target_project": "/home/x0tta6bl4-unified",
+  "environments": [
+    "development",
+    "staging",
+    "production"
+  ],
+  "services": {
+    "quantum": true,
+    "ai_ml": true,
+    "enterprise": true,
+    "billing": true,
+    "monitoring": true
+  }
+}
