@@ -1,0 +1,152 @@
+groups:
+  - name: x0tta6bl4_quantum_alerts
+    rules:
+      # Quantum Coherence Alerts
+      - alert: LowQuantumCoherence
+        expr: x0tta6bl4_quantum_coherence_time_seconds < 20
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low quantum coherence time detected"
+          description: "Quantum coherence time is {{ $value }}s, below threshold of 20s"
+
+      - alert: HighDecoherenceRate
+        expr: x0tta6bl4_quantum_decoherence_rate > 0.005
+        for: 3m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High decoherence rate detected"
+          description: "Decoherence rate is {{ $value }}/s, above threshold of 0.005/s"
+
+      # Entanglement Alerts
+      - alert: LowEntanglementFidelity
+        expr: x0tta6bl4_quantum_entanglement_fidelity < 0.85
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low entanglement fidelity detected"
+          description: "Entanglement fidelity is {{ $value }}, below threshold of 0.85"
+
+      - alert: HighEntanglementEntropy
+        expr: x0tta6bl4_quantum_entanglement_entropy > 1.5
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High entanglement entropy detected"
+          description: "Entanglement entropy is {{ $value }} nats, above threshold of 1.5 nats"
+
+      # Gate Error Alerts
+      - alert: HighGateErrorRate
+        expr: x0tta6bl4_quantum_gate_error_rate > 2.0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High gate error rate detected"
+          description: "Gate error rate is {{ $value }}%, above threshold of 2%"
+
+      - alert: HighReadoutErrorRate
+        expr: x0tta6bl4_quantum_readout_error_rate > 1.0
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High readout error rate detected"
+          description: "Readout error rate is {{ $value }}%, above threshold of 1%"
+
+      - alert: HighCalibrationDrift
+        expr: x0tta6bl4_quantum_calibration_drift > 0.005
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High calibration drift detected"
+          description: "Calibration drift is {{ $value }}, above threshold of 0.005"
+
+      # Quantum Supremacy Alerts
+      - alert: LowQuantumSpeedup
+        expr: x0tta6bl4_quantum_speedup_ratio < 1.5
+        for: 10m
+        labels:
+          severity: info
+        annotations:
+          summary: "Low quantum speedup detected"
+          description: "Quantum speedup ratio is {{ $value }}, below threshold of 1.5x"
+
+      - alert: LowQuantumAdvantage
+        expr: x0tta6bl4_quantum_advantage_ratio < 1.2
+        for: 10m
+        labels:
+          severity: info
+        annotations:
+          summary: "Low quantum advantage detected"
+          description: "Quantum advantage ratio is {{ $value }}, below threshold of 1.2x"
+
+      - alert: LowNISQMetric
+        expr: x0tta6bl4_quantum_nisq_metric < 0.6
+        for: 15m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low NISQ metric detected"
+          description: "NISQ metric is {{ $value }}, below threshold of 0.6"
+
+      # Quantum Volume Alerts
+      - alert: LowQuantumVolume
+        expr: x0tta6bl4_quantum_volume < 40
+        for: 10m
+        labels:
+          severity: info
+        annotations:
+          summary: "Low quantum volume detected"
+          description: "Quantum volume is {{ $value }}, below threshold of 40"
+
+      - alert: LowCircuitConnectivity
+        expr: x0tta6bl4_quantum_circuit_connectivity < 0.75
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low circuit connectivity detected"
+          description: "Circuit connectivity is {{ $value }}, below threshold of 0.75"
+
+      - alert: LowQubitConnectivity
+        expr: x0tta6bl4_quantum_qubit_connectivity < 3
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low qubit connectivity detected"
+          description: "Qubit connectivity degree is {{ $value }}, below threshold of 3"
+
+      # General Quantum Alerts
+      - alert: HighQuantumErrorRate
+        expr: x0tta6bl4_quantum_error_rate > 3.0
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High quantum error rate detected"
+          description: "Quantum error rate is {{ $value }}%, above threshold of 3%"
+
+      - alert: QuantumSystemDown
+        expr: up{job="x0tta6bl4-quantum"} == 0
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Quantum system is down"
+          description: "x0tta6bl4 quantum system has been down for more than 2 minutes"
+
+      - alert: LowQuantumOperationsSuccess
+        expr: (x0tta6bl4_quantum_operations_total - x0tta6bl4_quantum_failed_operations_total) / x0tta6bl4_quantum_operations_total < 0.9
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low quantum operations success rate"
+          description: "Quantum operations success rate is {{ $value | humanizePercentage }}, below 90%"

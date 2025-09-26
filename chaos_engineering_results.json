@@ -1,0 +1,232 @@
+{
+  "network_failures": [
+    {
+      "failure_type": "connection_timeout",
+      "test_duration": 10,
+      "recovery_time": 5,
+      "failures_detected": 0,
+      "recoveries_detected": 5,
+      "resilience_score": 1.0,
+      "status": "passed"
+    },
+    {
+      "failure_type": "connection_refused",
+      "test_duration": 10,
+      "recovery_time": 5,
+      "failures_detected": 0,
+      "recoveries_detected": 5,
+      "resilience_score": 1.0,
+      "status": "passed"
+    },
+    {
+      "failure_type": "network_partition",
+      "test_duration": 10,
+      "recovery_time": 5,
+      "failures_detected": 0,
+      "recoveries_detected": 5,
+      "resilience_score": 1.0,
+      "status": "passed"
+    },
+    {
+      "failure_type": "high_latency",
+      "test_duration": 10,
+      "recovery_time": 5,
+      "failures_detected": 0,
+      "recoveries_detected": 5,
+      "resilience_score": 1.0,
+      "status": "passed"
+    },
+    {
+      "failure_type": "packet_loss",
+      "test_duration": 10,
+      "recovery_time": 5,
+      "failures_detected": 0,
+      "recoveries_detected": 5,
+      "resilience_score": 1.0,
+      "status": "passed"
+    }
+  ],
+  "service_crashes": [
+    {
+      "scenario": "api_server_crash",
+      "crash_duration": 15,
+      "monitoring_period": 30,
+      "total_downtime": 0,
+      "availability": 1.0,
+      "mttr": 15,
+      "recovery_detected": true,
+      "status": "passed"
+    },
+    {
+      "scenario": "database_connection_lost",
+      "crash_duration": 15,
+      "monitoring_period": 30,
+      "total_downtime": 0,
+      "availability": 1.0,
+      "mttr": 15,
+      "recovery_detected": true,
+      "status": "passed"
+    },
+    {
+      "scenario": "quantum_core_failure",
+      "crash_duration": 15,
+      "monitoring_period": 30,
+      "total_downtime": 0,
+      "availability": 1.0,
+      "mttr": 15,
+      "recovery_detected": true,
+      "status": "passed"
+    },
+    {
+      "scenario": "monitoring_system_down",
+      "crash_duration": 15,
+      "monitoring_period": 30,
+      "total_downtime": 0,
+      "availability": 1.0,
+      "mttr": 15,
+      "recovery_detected": true,
+      "status": "passed"
+    },
+    {
+      "scenario": "load_balancer_failure",
+      "crash_duration": 15,
+      "monitoring_period": 30,
+      "total_downtime": 0,
+      "availability": 1.0,
+      "mttr": 15,
+      "recovery_detected": true,
+      "status": "passed"
+    }
+  ],
+  "resource_exhaustion": [
+    {
+      "resource_type": "memory_exhaustion",
+      "stress_level": 0.8,
+      "test_duration": 20,
+      "avg_response_time": 0.0009348000000000001,
+      "max_response_time": 0.00133,
+      "recovery_time": 0.0010118484497070312,
+      "resilience_score": 0.99981304,
+      "status": "passed"
+    },
+    {
+      "resource_type": "cpu_exhaustion",
+      "stress_level": 0.8,
+      "test_duration": 20,
+      "avg_response_time": 0.00092485,
+      "max_response_time": 0.001604,
+      "recovery_time": 0.0010554790496826172,
+      "resilience_score": 0.99981503,
+      "status": "passed"
+    },
+    {
+      "resource_type": "disk_space_exhaustion",
+      "stress_level": 0.8,
+      "test_duration": 20,
+      "avg_response_time": 0.00093805,
+      "max_response_time": 0.001404,
+      "recovery_time": 0.0010294914245605469,
+      "resilience_score": 0.99981239,
+      "status": "passed"
+    },
+    {
+      "resource_type": "network_bandwidth_exhaustion",
+      "stress_level": 0.8,
+      "test_duration": 20,
+      "avg_response_time": 0.0009714499999999999,
+      "max_response_time": 0.001534,
+      "recovery_time": 0.0010025501251220703,
+      "resilience_score": 0.99980571,
+      "status": "passed"
+    },
+    {
+      "resource_type": "file_descriptor_exhaustion",
+      "stress_level": 0.8,
+      "test_duration": 20,
+      "avg_response_time": 0.0009287999999999999,
+      "max_response_time": 0.001336,
+      "recovery_time": 0.0010404586791992188,
+      "resilience_score": 0.99981424,
+      "status": "passed"
+    }
+  ],
+  "data_corruption": [
+    {
+      "corruption_type": "config_file_corruption",
+      "corruption_duration": 10,
+      "recovery_attempts": 5,
+      "corruption_detected": false,
+      "recovery_successful": true,
+      "detection_time": 10,
+      "recovery_time": 2,
+      "status": "passed"
+    },
+    {
+      "corruption_type": "database_record_corruption",
+      "corruption_duration": 10,
+      "recovery_attempts": 5,
+      "corruption_detected": false,
+      "recovery_successful": true,
+      "detection_time": 10,
+      "recovery_time": 2,
+      "status": "passed"
+    },
+    {
+      "corruption_type": "cache_poisoning",
+      "corruption_duration": 10,
+      "recovery_attempts": 5,
+      "corruption_detected": false,
+      "recovery_successful": true,
+      "detection_time": 10,
+      "recovery_time": 2,
+      "status": "passed"
+    },
+    {
+      "corruption_type": "message_queue_corruption",
+      "corruption_duration": 10,
+      "recovery_attempts": 5,
+      "corruption_detected": false,
+      "recovery_successful": true,
+      "detection_time": 10,
+      "recovery_time": 2,
+      "status": "passed"
+    },
+    {
+      "corruption_type": "log_file_corruption",
+      "corruption_duration": 10,
+      "recovery_attempts": 5,
+      "corruption_detected": false,
+      "recovery_successful": true,
+      "detection_time": 10,
+      "recovery_time": 2,
+      "status": "passed"
+    }
+  ],
+  "summary": {
+    "total_experiments": 20,
+    "passed_experiments": 20,
+    "warning_experiments": 0,
+    "failed_experiments": 0,
+    "network_resilience": {
+      "average_resilience": 1.0,
+      "weakest_link": 1.0
+    },
+    "service_resilience": {
+      "average_availability": 1.0,
+      "best_mttr": 15
+    },
+    "resource_resilience": {
+      "average_resilience": 0.999812082,
+      "resource_vulnerabilities": 0
+    },
+    "data_resilience": {
+      "recovery_rate": 1.0,
+      "average_detection_time": 10.0
+    },
+    "recommendations": [
+      "Реализовать real-time monitoring и alerting для быстрого обнаружения проблем"
+    ],
+    "total_chaos_time": 676.0332922935486,
+    "timestamp": "2025-09-25T20:06:40.645268"
+  }
+}

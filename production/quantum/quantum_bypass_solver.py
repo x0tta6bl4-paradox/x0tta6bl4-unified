@@ -254,14 +254,14 @@ class QuantumBypassSolver:
         try:
             # Тестируем подключение к домену
             test_commands = [
-                f"curl -x socks5://127.0.0.1:10808 -I https://{domain} --connect-timeout {params['timeout']} --max-time {params['timeout'] + 5}",
-                f"curl -x socks5://127.0.0.1:10808 -I http://{domain} --connect-timeout {params['timeout']} --max-time {params['timeout'] + 5}",
-                f"ping -c 3 {domain}"
+                ['curl', '-x', 'socks5://127.0.0.1:10808', '-I', f'https://{domain}', '--connect-timeout', str(params['timeout']), '--max-time', str(params['timeout'] + 5)],
+                ['curl', '-x', 'socks5://127.0.0.1:10808', '-I', f'http://{domain}', '--connect-timeout', str(params['timeout']), '--max-time', str(params['timeout'] + 5)],
+                ['ping', '-c', '3', domain]
             ]
-            
+
             for i, cmd in enumerate(test_commands):
                 try:
-                    result = subprocess.run(cmd, shell=True, capture_output=True, text=True, timeout=params['timeout'])
+                    result = subprocess.run(cmd, capture_output=True, text=True, timeout=params['timeout'])
                     
                     if result.returncode == 0:
                         method = ['https', 'http', 'ping'][i]

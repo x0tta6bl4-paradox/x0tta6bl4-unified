@@ -1,0 +1,233 @@
+{
+  "dashboard": {
+    "id": null,
+    "title": "x0tta6bl4 Quantum Metrics",
+    "tags": ["x0tta6bl4", "quantum", "metrics"],
+    "timezone": "browser",
+    "panels": [
+      {
+        "id": 1,
+        "title": "Active Qubits",
+        "type": "gauge",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_active_qubits",
+            "legendFormat": "Active Qubits"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 8, "x": 0, "y": 0}
+      },
+      {
+        "id": 2,
+        "title": "Quantum Gate Operations/sec",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "rate(x0tta6bl4_quantum_gate_operations_total[5m])",
+            "legendFormat": "Gate Ops/sec"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 16, "x": 8, "y": 0}
+      },
+      {
+        "id": 3,
+        "title": "Quantum Circuit Depth",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_circuit_depth",
+            "legendFormat": "Circuit Depth"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 8}
+      },
+      {
+        "id": 4,
+        "title": "Quantum Error Rate",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_error_rate",
+            "legendFormat": "Error Rate %"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 8}
+      },
+      {
+        "id": 5,
+        "title": "Quantum Processing Time",
+        "type": "heatmap",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_processing_duration_seconds",
+            "legendFormat": "Processing Time"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 24, "x": 0, "y": 16}
+      },
+      {
+        "id": 6,
+        "title": "Quantum Success Rate",
+        "type": "stat",
+        "targets": [
+          {
+            "expr": "(x0tta6bl4_quantum_operations_total - x0tta6bl4_quantum_failed_operations_total) / x0tta6bl4_quantum_operations_total * 100",
+            "legendFormat": "Success Rate %"
+          }
+        ],
+        "gridPos": {"h": 4, "w": 8, "x": 0, "y": 24}
+      },
+      {
+        "id": 7,
+        "title": "Quantum Memory Usage",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_memory_bytes",
+            "legendFormat": "Memory Usage (bytes)"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 16, "x": 8, "y": 24}
+      },
+      {
+        "id": 8,
+        "title": "Quantum Coherence Metrics",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_coherence_time_seconds",
+            "legendFormat": "Coherence Time (s)"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_decoherence_rate",
+            "legendFormat": "Decoherence Rate (1/s)"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_coherence_time_variation",
+            "legendFormat": "Coherence Variation (s)"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 24, "x": 0, "y": 32}
+      },
+      {
+        "id": 9,
+        "title": "Entanglement Metrics",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_entanglement_fidelity",
+            "legendFormat": "Entanglement Fidelity"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_entanglement_entropy",
+            "legendFormat": "Entanglement Entropy (nats)"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 40}
+      },
+      {
+        "id": 10,
+        "title": "Gate Error Rates",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_gate_error_rate",
+            "legendFormat": "Gate Error Rate (%)"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_readout_error_rate",
+            "legendFormat": "Readout Error Rate (%)"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_calibration_drift",
+            "legendFormat": "Calibration Drift"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 40}
+      },
+      {
+        "id": 11,
+        "title": "Quantum Supremacy Metrics",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_speedup_ratio",
+            "legendFormat": "Speedup Ratio"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_advantage_ratio",
+            "legendFormat": "Advantage Ratio"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_nisq_metric",
+            "legendFormat": "NISQ Metric"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 0, "y": 48}
+      },
+      {
+        "id": 12,
+        "title": "Quantum Volume & Connectivity",
+        "type": "graph",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_volume",
+            "legendFormat": "Quantum Volume"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_circuit_connectivity * 100",
+            "legendFormat": "Circuit Connectivity (%)"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_qubit_connectivity",
+            "legendFormat": "Qubit Connectivity Degree"
+          }
+        ],
+        "gridPos": {"h": 8, "w": 12, "x": 12, "y": 48}
+      },
+      {
+        "id": 13,
+        "title": "Quantum Health Overview",
+        "type": "table",
+        "targets": [
+          {
+            "expr": "x0tta6bl4_quantum_active_qubits",
+            "legendFormat": "Active Qubits"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_error_rate",
+            "legendFormat": "Error Rate (%)"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_entanglement_fidelity",
+            "legendFormat": "Entanglement Fidelity"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_gate_error_rate",
+            "legendFormat": "Gate Error Rate (%)"
+          },
+          {
+            "expr": "x0tta6bl4_quantum_speedup_ratio",
+            "legendFormat": "Speedup Ratio"
+          }
+        ],
+        "gridPos": {"h": 6, "w": 24, "x": 0, "y": 56}
+      }
+    ],
+    "time": {
+      "from": "now-1h",
+      "to": "now"
+    },
+    "timepicker": {},
+    "templating": {
+      "list": []
+    },
+    "annotations": {
+      "list": []
+    },
+    "refresh": "10s",
+    "schemaVersion": 27,
+    "version": 0,
+    "links": []
+  }
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "timestamp": "2025-09-25T23:23:07.896425+00:00",
+    "event_type": "COMPLIANCE_CHECK_COMPLETED",
+    "details": {
+      "regions_checked": 7,
+      "findings": {
+        "total_regions": 7,
+        "passed_regions": 7,
+        "failed_regions": 0,
+        "gdpr_compliance": "7/7",
+        "hipaa_compliance": "7/7",
+        "quantum_security": "7/7",
+        "overall_compliance": "PASS"
+      }
+    },
+    "user": "compliance_verifier",
+    "system": "x0tta6bl4"
+  }
+]

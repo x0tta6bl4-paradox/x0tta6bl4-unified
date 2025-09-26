@@ -1,0 +1,987 @@
+{
+  "timestamp": 1758814509.3493237,
+  "results": {
+    "shor": {
+      "algorithm": "shor",
+      "results": [
+        {
+          "number": 15,
+          "quantum_factors": [
+            15
+          ],
+          "classical_factors": [
+            3,
+            5
+          ],
+          "quantum_time": 0.001165628433227539,
+          "classical_time": 2.86102294921875e-06,
+          "speedup_factor": 0.0024544896706893025,
+          "quantum_metrics": {
+            "coherence_time": 5.6552196098268635e-05,
+            "entanglement_fidelity": 0.9699170676359167,
+            "gate_error_rate": 0.0019508286477952046,
+            "readout_error": 0.02697316072995816,
+            "t1_time": 3.0171079078243932e-05,
+            "t2_time": 2.295778793714472e-05,
+            "circuit_depth": 6,
+            "qubit_count": 8
+          },
+          "success": false,
+          "provider": "xanadu"
+        },
+        {
+          "number": 21,
+          "quantum_factors": [
+            21
+          ],
+          "classical_factors": [
+            3,
+            7
+          ],
+          "quantum_time": 0.0004885196685791016,
+          "classical_time": 2.1457672119140625e-06,
+          "speedup_factor": 0.004392386530014641,
+          "quantum_metrics": {
+            "coherence_time": 5.1948669921112106e-05,
+            "entanglement_fidelity": 0.9846798371254668,
+            "gate_error_rate": 0.001036065783356174,
+            "readout_error": 0.013261006249550001,
+            "t1_time": 3.297764881349314e-05,
+            "t2_time": 2.0623578141619907e-05,
+            "circuit_depth": 8,
+            "qubit_count": 10
+          },
+          "success": false,
+          "provider": "xanadu"
+        },
+        {
+          "number": 35,
+          "quantum_factors": [
+            35
+          ],
+          "classical_factors": [
+            5,
+            7
+          ],
+          "quantum_time": 0.0004439353942871094,
+          "classical_time": 1.430511474609375e-06,
+          "speedup_factor": 0.00322234156820623,
+          "quantum_metrics": {
+            "coherence_time": 5.8177744276900604e-05,
+            "entanglement_fidelity": 0.9501232802565605,
+            "gate_error_rate": 0.001518201963783489,
+            "readout_error": 0.02809018473802575,
+            "t1_time": 3.055296681928915e-05,
+            "t2_time": 2.079322350718738e-05,
+            "circuit_depth": 10,
+            "qubit_count": 12
+          },
+          "success": false,
+          "provider": "xanadu"
+        },
+        {
+          "number": 77,
+          "quantum_factors": [
+            77
+          ],
+          "classical_factors": [
+            7,
+            11
+          ],
+          "quantum_time": 0.0004210472106933594,
+          "classical_time": 1.6689300537109375e-06,
+          "speedup_factor": 0.003963759909399773,
+          "quantum_metrics": {
+            "coherence_time": 5.370376638220984e-05,
+            "entanglement_fidelity": 0.987348048246942,
+            "gate_error_rate": 0.00235493878664283,
+            "readout_error": 0.02403252570892335,
+            "t1_time": 3.205749720105762e-05,
+            "t2_time": 2.008915306761762e-05,
+            "circuit_depth": 12,
+            "qubit_count": 14
+          },
+          "success": false,
+          "provider": "xanadu"
+        },
+        {
+          "number": 143,
+          "quantum_factors": [
+            143
+          ],
+          "classical_factors": [
+            11,
+            13
+          ],
+          "quantum_time": 0.0004265308380126953,
+          "classical_time": 2.1457672119140625e-06,
+          "speedup_factor": 0.005030743432084964,
+          "quantum_metrics": {
+            "coherence_time": 5.180346053983554e-05,
+            "entanglement_fidelity": 0.9791981423796936,
+            "gate_error_rate": 0.0027662307343790243,
+            "readout_error": 0.011267369865660397,
+            "t1_time": 3.0846296418220606e-05,
+            "t2_time": 2.130850802282565e-05,
+            "circuit_depth": 14,
+            "qubit_count": 16
+          },
+          "success": false,
+          "provider": "xanadu"
+        },
+        {
+          "number": 323,
+          "quantum_factors": [
+            323
+          ],
+          "classical_factors": [
+            17,
+            19
+          ],
+          "quantum_time": 0.0004127025604248047,
+          "classical_time": 1.6689300537109375e-06,
+          "speedup_factor": 0.004043905257076834,
+          "quantum_metrics": {
+            "coherence_time": 5.5798000006464715e-05,
+            "entanglement_fidelity": 0.9706948618557685,
+            "gate_error_rate": 0.001362627891540218,
+            "readout_error": 0.021152246137980436,
+            "t1_time": 3.357498307076775e-05,
+            "t2_time": 2.27440402084303e-05,
+            "circuit_depth": 16,
+            "qubit_count": 18
+          },
+          "success": false,
+          "provider": "xanadu"
+        },
+        {
+          "number": 899,
+          "quantum_factors": [
+            899
+          ],
+          "classical_factors": [
+            29,
+            31
+          ],
+          "quantum_time": 0.00040650367736816406,
+          "classical_time": 1.9073486328125e-06,
+          "speedup_factor": 0.00469208211143695,
+          "quantum_metrics": {
+            "coherence_time": 5.3969452290723596e-05,
+            "entanglement_fidelity": 0.9547657131381535,
+            "gate_error_rate": 0.001074143345015569,
+            "readout_error": 0.01734204185721416,
+            "t1_time": 3.271526779375954e-05,
+            "t2_time": 2.1795399692053818e-05,
+            "circuit_depth": 18,
+            "qubit_count": 20
+          },
+          "success": false,
+          "provider": "xanadu"
+        },
+        {
+          "number": 1763,
+          "quantum_factors": [
+            1763
+          ],
+          "classical_factors": [
+            41,
+            43
+          ],
+          "quantum_time": 0.00041484832763671875,
+          "classical_time": 1.9073486328125e-06,
+          "speedup_factor": 0.004597701149425287,
+          "quantum_metrics": {
+            "coherence_time": 5.923462490034932e-05,
+            "entanglement_fidelity": 0.9896551832303813,
+            "gate_error_rate": 0.001992166396426474,
+            "readout_error": 0.027182797629028144,
+            "t1_time": 3.1060635196330814e-05,
+            "t2_time": 2.1515095335542923e-05,
+            "circuit_depth": 20,
+            "qubit_count": 22
+          },
+          "success": false,
+          "provider": "xanadu"
+        },
+        {
+          "number": 3599,
+          "quantum_factors": [
+            3599
+          ],
+          "classical_factors": [
+            59,
+            61
+          ],
+          "quantum_time": 0.0003986358642578125,
+          "classical_time": 2.384185791015625e-06,
+          "speedup_factor": 0.005980861244019139,
+          "quantum_metrics": {
+            "coherence_time": 5.242222732740768e-05,
+            "entanglement_fidelity": 0.9549532814849575,
+            "gate_error_rate": 0.0013365532979496453,
+            "readout_error": 0.015843587725735714,
+            "t1_time": 3.271310607189555e-05,
+            "t2_time": 2.0325215244093954e-05,
+            "circuit_depth": 22,
+            "qubit_count": 24
+          },
+          "success": false,
+          "provider": "xanadu"
+        },
+        {
+          "number": 10007,
+          "quantum_factors": [
+            10007
+          ],
+          "classical_factors": [
+            10007
+          ],
+          "quantum_time": 0.0004305839538574219,
+          "classical_time": 2.384185791015625e-06,
+          "speedup_factor": 0.005537098560354375,
+          "quantum_metrics": {
+            "coherence_time": 5.539398892322346e-05,
+            "entanglement_fidelity": 0.9797854987208423,
+            "gate_error_rate": 0.00239408108032737,
+            "readout_error": 0.023526777364625426,
+            "t1_time": 3.332625697813998e-05,
+            "t2_time": 2.0335679409406895e-05,
+            "circuit_depth": 26,
+            "qubit_count": 28
+          },
+          "success": true,
+          "provider": "xanadu"
+        }
+      ],
+      "analysis": {
+        "algorithm": "shor",
+        "problem_size": 5,
+        "total_test_cases": 10,
+        "successful_runs": 1,
+        "success_rate": 0.1,
+        "average_speedup": 0.00439153694327075,
+        "max_speedup": 0.005980861244019139,
+        "total_quantum_time": 0.0050089359283447266,
+        "total_classical_time": 2.0503997802734375e-05,
+        "large_number_demo": {
+          "large_number": 18446744073709551615,
+          "classical_factors": [
+            18446744073709551615
+          ],
+          "quantum_factors": [
+            3,
+            5,
+            17,
+            257,
+            641,
+            65537,
+            6700417
+          ],
+          "classical_time": 42.732136487960815,
+          "quantum_time": 42.813889265060425,
+          "speedup": 0.9980905080453336,
+          "note": "Для действительно больших чисел (2048+ бит) классические методы становятся невозможными"
+        },
+        "quantum_advantage_demonstrated": "False",
+        "timestamp": 1758814144.6098626
+      },
+      "speedup_factor": 0.00439153694327075,
+      "success_rate": 0.1,
+      "quantum_advantage": "False",
+      "metadata": {
+        "test_numbers": [
+          15,
+          21,
+          35,
+          77,
+          143,
+          323,
+          899,
+          1763,
+          3599,
+          10007
+        ],
+        "classical_method": "trial_division",
+        "quantum_implementation": "simulated"
+      }
+    },
+    "grover": {
+      "error": "name 'Tuple' is not defined"
+    },
+    "qaoa": {
+      "algorithm": "qaoa",
+      "results": [
+        {
+          "graph_type": "random",
+          "n_nodes": 10,
+          "n_edges": 27,
+          "quantum_energy": 20.539535552968285,
+          "classical_energy": 18.967396795758667,
+          "best_classical_method": "simulated_annealing",
+          "approximation_ratio": 1.0828863746637687,
+          "quantum_time": 0.00086212158203125,
+          "classical_time": 0.0003829002380371094,
+          "speedup_factor": 0.44413716814159293,
+          "quantum_metrics": {
+            "coherence_time": 8.980762934365787e-05,
+            "entanglement_fidelity": 0.9417286471326152,
+            "gate_error_rate": 0.005810816630468138,
+            "readout_error": 0.03374204350724047,
+            "t1_time": 4.144676020388716e-05,
+            "t2_time": 2.3707770465051945e-05,
+            "circuit_depth": 40,
+            "qubit_count": 10,
+            "two_qubit_gate_count": 54,
+            "parameter_count": 20
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "random",
+          "n_nodes": 20,
+          "n_edges": 80,
+          "quantum_energy": 80.03517413496893,
+          "classical_energy": 62.24348634622648,
+          "best_classical_method": "simulated_annealing",
+          "approximation_ratio": 1.2858401550609972,
+          "quantum_time": 0.00030040740966796875,
+          "classical_time": 0.001827239990234375,
+          "speedup_factor": 6.082539682539682,
+          "quantum_metrics": {
+            "coherence_time": 8.409892218995569e-05,
+            "entanglement_fidelity": 0.8657817582207096,
+            "gate_error_rate": 0.004504657075855477,
+            "readout_error": 0.047473429433942324,
+            "t1_time": 4.131579789266694e-05,
+            "t2_time": 2.4257320264797753e-05,
+            "circuit_depth": 80,
+            "qubit_count": 20,
+            "two_qubit_gate_count": 160,
+            "parameter_count": 40
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "random",
+          "n_nodes": 50,
+          "n_edges": 599,
+          "quantum_energy": 506.8442158047199,
+          "classical_energy": 379.71866395490366,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 1.3347887894836636,
+          "quantum_time": 0.00028896331787109375,
+          "classical_time": 0.0422978401184082,
+          "speedup_factor": 146.37788778877888,
+          "quantum_metrics": {
+            "coherence_time": 8.116511991572504e-05,
+            "entanglement_fidelity": 0.885024322187637,
+            "gate_error_rate": 0.003084417685204925,
+            "readout_error": 0.04261188838109657,
+            "t1_time": 3.8046862888790045e-05,
+            "t2_time": 2.3859502405762747e-05,
+            "circuit_depth": 200,
+            "qubit_count": 50,
+            "two_qubit_gate_count": 1198,
+            "parameter_count": 100
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "random",
+          "n_nodes": 100,
+          "n_edges": 2472,
+          "quantum_energy": 2135.9463918251736,
+          "classical_energy": 1541.6957898104622,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 1.3854525684913295,
+          "quantum_time": 0.0002484321594238281,
+          "classical_time": 0.3882176876068115,
+          "speedup_factor": 1562.6708253358925,
+          "quantum_metrics": {
+            "coherence_time": 8.698205935138968e-05,
+            "entanglement_fidelity": 0.8770785284809954,
+            "gate_error_rate": 0.00540095057576166,
+            "readout_error": 0.03756500186873946,
+            "t1_time": 4.071213501608252e-05,
+            "t2_time": 2.4587499182983713e-05,
+            "circuit_depth": 400,
+            "qubit_count": 100,
+            "two_qubit_gate_count": 4944,
+            "parameter_count": 200
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "random",
+          "n_nodes": 200,
+          "n_edges": 9989,
+          "quantum_energy": 8432.960810257318,
+          "classical_energy": 5874.517355825088,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 1.4355155154823593,
+          "quantum_time": 0.0003075599670410156,
+          "classical_time": 1.5652546882629395,
+          "speedup_factor": 5089.266666666666,
+          "quantum_metrics": {
+            "coherence_time": 8.063776548910901e-05,
+            "entanglement_fidelity": 0.8521045604575932,
+            "gate_error_rate": 0.006018102322480854,
+            "readout_error": 0.02220952293167106,
+            "t1_time": 3.514638958323926e-05,
+            "t2_time": 2.3295991437765988e-05,
+            "circuit_depth": 800,
+            "qubit_count": 200,
+            "two_qubit_gate_count": 19978,
+            "parameter_count": 400
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "random",
+          "n_nodes": 500,
+          "n_edges": 62258,
+          "quantum_energy": 53140.03750130575,
+          "classical_energy": 35329.89614379245,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 1.504109643714381,
+          "quantum_time": 0.00029015541076660156,
+          "classical_time": 11.420414447784424,
+          "speedup_factor": 39359.64667214462,
+          "quantum_metrics": {
+            "coherence_time": 8.014627255861991e-05,
+            "entanglement_fidelity": 0.9174038878683943,
+            "gate_error_rate": 0.006856891794019956,
+            "readout_error": 0.03877498940340037,
+            "t1_time": 3.532992315950768e-05,
+            "t2_time": 2.2592312893085156e-05,
+            "circuit_depth": 2000,
+            "qubit_count": 500,
+            "two_qubit_gate_count": 124516,
+            "parameter_count": 1000
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "complete",
+          "n_nodes": 10,
+          "n_edges": 45,
+          "quantum_energy": 39.59414936138947,
+          "classical_energy": 31.578781186321514,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 1.253821327928256,
+          "quantum_time": 0.00023674964904785156,
+          "classical_time": 0.00037598609924316406,
+          "speedup_factor": 1.5881168177240685,
+          "quantum_metrics": {
+            "coherence_time": 8.284015603863237e-05,
+            "entanglement_fidelity": 0.8592459251861952,
+            "gate_error_rate": 0.005197086054882461,
+            "readout_error": 0.022769961271553084,
+            "t1_time": 3.5389299316577725e-05,
+            "t2_time": 2.4216491353966303e-05,
+            "circuit_depth": 40,
+            "qubit_count": 10,
+            "two_qubit_gate_count": 90,
+            "parameter_count": 20
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "complete",
+          "n_nodes": 20,
+          "n_edges": 190,
+          "quantum_energy": 151.01930374818753,
+          "classical_energy": 118.50420678917216,
+          "best_classical_method": "simulated_annealing",
+          "approximation_ratio": 1.274379263318999,
+          "quantum_time": 0.0002598762512207031,
+          "classical_time": 0.006380319595336914,
+          "speedup_factor": 24.55137614678899,
+          "quantum_metrics": {
+            "coherence_time": 8.380080036169527e-05,
+            "entanglement_fidelity": 0.9221539409231801,
+            "gate_error_rate": 0.004554401005214429,
+            "readout_error": 0.04489417028498509,
+            "t1_time": 4.1424700251828353e-05,
+            "t2_time": 2.278719382389917e-05,
+            "circuit_depth": 80,
+            "qubit_count": 20,
+            "two_qubit_gate_count": 380,
+            "parameter_count": 40
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "complete",
+          "n_nodes": 50,
+          "n_edges": 1225,
+          "quantum_energy": 1186.7615610198766,
+          "classical_energy": 729.5883826620725,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 1.6266179522893467,
+          "quantum_time": 0.0002715587615966797,
+          "classical_time": 0.19318127632141113,
+          "speedup_factor": 711.3792800702371,
+          "quantum_metrics": {
+            "coherence_time": 9.21587895830891e-05,
+            "entanglement_fidelity": 0.933755739679442,
+            "gate_error_rate": 0.005834854557593645,
+            "readout_error": 0.03298278069048412,
+            "t1_time": 3.606404194696097e-05,
+            "t2_time": 2.5901406278047644e-05,
+            "circuit_depth": 200,
+            "qubit_count": 50,
+            "two_qubit_gate_count": 2450,
+            "parameter_count": 100
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "complete",
+          "n_nodes": 100,
+          "n_edges": 4950,
+          "quantum_energy": 4730.413804165459,
+          "classical_energy": 2805.2056726602605,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 1.6862983881247702,
+          "quantum_time": 0.0002646446228027344,
+          "classical_time": 0.76615309715271,
+          "speedup_factor": 2895.026126126126,
+          "quantum_metrics": {
+            "coherence_time": 9.18446744507975e-05,
+            "entanglement_fidelity": 0.8720066146322534,
+            "gate_error_rate": 0.003109249769274811,
+            "readout_error": 0.04215918745394273,
+            "t1_time": 3.8927510989109555e-05,
+            "t2_time": 2.354810025263675e-05,
+            "circuit_depth": 400,
+            "qubit_count": 100,
+            "two_qubit_gate_count": 9900,
+            "parameter_count": 200
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "grid",
+          "n_nodes": 10,
+          "n_edges": 12,
+          "quantum_energy": 8.429565396934638,
+          "classical_energy": 10.616282000379748,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 0.7940223702265171,
+          "quantum_time": 0.00023102760314941406,
+          "classical_time": 0.00019884109497070312,
+          "speedup_factor": 0.8606811145510835,
+          "quantum_metrics": {
+            "coherence_time": 9.435730542042069e-05,
+            "entanglement_fidelity": 0.9231417163026313,
+            "gate_error_rate": 0.006193943430426836,
+            "readout_error": 0.03553576832553757,
+            "t1_time": 3.972213878287651e-05,
+            "t2_time": 2.3148381765534468e-05,
+            "circuit_depth": 36,
+            "qubit_count": 9,
+            "two_qubit_gate_count": 24,
+            "parameter_count": 18
+          },
+          "success": false,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "grid",
+          "n_nodes": 20,
+          "n_edges": 24,
+          "quantum_energy": 21.27726709391645,
+          "classical_energy": 28.092347971045566,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 0.7574043691843296,
+          "quantum_time": 0.00021028518676757812,
+          "classical_time": 0.0004038810729980469,
+          "speedup_factor": 1.9206349206349207,
+          "quantum_metrics": {
+            "coherence_time": 8.353382659472896e-05,
+            "entanglement_fidelity": 0.9113743141187229,
+            "gate_error_rate": 0.003267531450537789,
+            "readout_error": 0.029261301489295483,
+            "t1_time": 3.622041850305738e-05,
+            "t2_time": 2.5809966018148652e-05,
+            "circuit_depth": 64,
+            "qubit_count": 16,
+            "two_qubit_gate_count": 48,
+            "parameter_count": 32
+          },
+          "success": false,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "grid",
+          "n_nodes": 50,
+          "n_edges": 84,
+          "quantum_energy": 75.64458224259809,
+          "classical_energy": 77.07240077279887,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 0.9814743213409189,
+          "quantum_time": 0.0002117156982421875,
+          "classical_time": 0.0054209232330322266,
+          "speedup_factor": 25.60472972972973,
+          "quantum_metrics": {
+            "coherence_time": 9.254408549953277e-05,
+            "entanglement_fidelity": 0.9417874128644638,
+            "gate_error_rate": 0.0032888647003845046,
+            "readout_error": 0.021672802690763802,
+            "t1_time": 3.8509961898330003e-05,
+            "t2_time": 2.5934684254164478e-05,
+            "circuit_depth": 196,
+            "qubit_count": 49,
+            "two_qubit_gate_count": 168,
+            "parameter_count": 98
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "grid",
+          "n_nodes": 100,
+          "n_edges": 180,
+          "quantum_energy": 168.05749372502777,
+          "classical_energy": 168.2488515245301,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 0.9988626501888815,
+          "quantum_time": 0.0002491474151611328,
+          "classical_time": 0.037903547286987305,
+          "speedup_factor": 152.13301435406697,
+          "quantum_metrics": {
+            "coherence_time": 8.981880276833946e-05,
+            "entanglement_fidelity": 0.9418644049923723,
+            "gate_error_rate": 0.006753874876908248,
+            "readout_error": 0.024260037268071334,
+            "t1_time": 3.730933716288984e-05,
+            "t2_time": 2.2216099751995162e-05,
+            "circuit_depth": 400,
+            "qubit_count": 100,
+            "two_qubit_gate_count": 360,
+            "parameter_count": 200
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "grid",
+          "n_nodes": 200,
+          "n_edges": 364,
+          "quantum_energy": 320.8774887085537,
+          "classical_energy": 330.7754162064443,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 0.9700765927183868,
+          "quantum_time": 0.00023818016052246094,
+          "classical_time": 0.07589554786682129,
+          "speedup_factor": 318.64764764764766,
+          "quantum_metrics": {
+            "coherence_time": 9.415247072887724e-05,
+            "entanglement_fidelity": 0.8976417362298436,
+            "gate_error_rate": 0.00448808621426742,
+            "readout_error": 0.044604165324362274,
+            "t1_time": 3.816283850251375e-05,
+            "t2_time": 2.4261739859979804e-05,
+            "circuit_depth": 784,
+            "qubit_count": 196,
+            "two_qubit_gate_count": 728,
+            "parameter_count": 392
+          },
+          "success": true,
+          "provider": "simulated"
+        },
+        {
+          "graph_type": "grid",
+          "n_nodes": 500,
+          "n_edges": 924,
+          "quantum_energy": 766.4027606378821,
+          "classical_energy": 854.6024828891015,
+          "best_classical_method": "sdp_approximation",
+          "approximation_ratio": 0.8967944465208573,
+          "quantum_time": 0.0002899169921875,
+          "classical_time": 0.18823719024658203,
+          "speedup_factor": 649.2796052631579,
+          "quantum_metrics": {
+            "coherence_time": 8.75729603926592e-05,
+            "entanglement_fidelity": 0.8806039259202814,
+            "gate_error_rate": 0.003534978848714769,
+            "readout_error": 0.023566020968047267,
+            "t1_time": 4.042181652828602e-05,
+            "t2_time": 2.3948159387089425e-05,
+            "circuit_depth": 1936,
+            "qubit_count": 484,
+            "two_qubit_gate_count": 1848,
+            "parameter_count": 968
+          },
+          "success": true,
+          "provider": "simulated"
+        }
+      ],
+      "analysis": {
+        "algorithm": "qaoa",
+        "max_graph_size": 500,
+        "total_test_cases": 16,
+        "successful_runs": 14,
+        "success_rate": 0.875,
+        "average_approximation_ratio": 1.20427154554611,
+        "average_speedup": 3184.0924963110815,
+        "quantum_advantage_demonstrated": "True",
+        "total_quantum_time": 0.0047607421875,
+        "total_classical_time": 14.692545413970947,
+        "large_graph_demo": {
+          "large_graph_size": 500,
+          "large_graph_edges": 12214,
+          "classical_energy": 7423.862079844607,
+          "quantum_energy": 9969.392206903698,
+          "approximation_ratio": 1.342884889250579,
+          "classical_time": 2.1757712364196777,
+          "quantum_time": 0.0002703666687011719,
+          "speedup": 8047.483245149911,
+          "note": "Для графов 500+ вершин классические методы становятся неэффективными"
+        },
+        "graph_types_tested": [
+          "random",
+          "complete",
+          "grid"
+        ],
+        "timestamp": 1758814509.2861884
+      },
+      "approximation_ratio": 1.20427154554611,
+      "speedup_factor": 3184.0924963110815,
+      "quantum_advantage": "True",
+      "success_rate": 0.875,
+      "metadata": {
+        "graph_sizes": [
+          10,
+          20,
+          50,
+          100,
+          200,
+          500
+        ],
+        "graph_types": [
+          "random",
+          "complete",
+          "grid"
+        ],
+        "classical_methods": [
+          "greedy",
+          "simulated_annealing",
+          "sdp_approximation"
+        ],
+        "qaoa_depth": 2,
+        "quantum_implementation": "simulated"
+      }
+    },
+    "vqe": {
+      "algorithm": "vqe",
+      "results": [
+        {
+          "molecule": "H2",
+          "molecule_name": "Водород",
+          "exact_energy": -1.174,
+          "quantum_energy": -1.0228321002032557,
+          "classical_energy": -1.1255405237272327,
+          "best_classical_method": "hartree_fock",
+          "quantum_accuracy": 0.12876311737371746,
+          "classical_accuracy": 0.04127723702961436,
+          "energy_error_quantum": 0.15116789979674428,
+          "energy_error_classical": 0.048459476272767255,
+          "quantum_time": 0.000263214111328125,
+          "classical_time": 2.384185791015625e-07,
+          "speedup_factor": 0.0009057971014492754,
+          "quantum_metrics": {
+            "coherence_time": 0.00013647573095610426,
+            "entanglement_fidelity": 0.9692579083125692,
+            "gate_error_rate": 0.002072864329341211,
+            "readout_error": 0.02245531064503902,
+            "t1_time": 4.654498634890645e-05,
+            "t2_time": 2.9211627153049635e-05,
+            "circuit_depth": 6,
+            "qubit_count": 3,
+            "ansatz_parameters": 4,
+            "measurements_per_circuit": 2209
+          },
+          "success": false,
+          "provider": "simulated"
+        },
+        {
+          "molecule": "H2O",
+          "molecule_name": "Вода",
+          "exact_energy": -76.4,
+          "quantum_energy": -5.043231868578832,
+          "classical_energy": -76.0346213276151,
+          "best_classical_method": "hartree_fock",
+          "quantum_accuracy": 0.9339891116678164,
+          "classical_accuracy": 0.004782443355823385,
+          "energy_error_quantum": 71.35676813142118,
+          "energy_error_classical": 0.3653786723849066,
+          "quantum_time": 0.00013494491577148438,
+          "classical_time": 4.76837158203125e-07,
+          "speedup_factor": 0.0035335689045936395,
+          "quantum_metrics": {
+            "coherence_time": 0.00014350282275079856,
+            "entanglement_fidelity": 0.887176598018142,
+            "gate_error_rate": 0.0017054073071898455,
+            "readout_error": 0.02729058591075198,
+            "t1_time": 5.3508694529458484e-05,
+            "t2_time": 3.058666912267806e-05,
+            "circuit_depth": 30,
+            "qubit_count": 7,
+            "ansatz_parameters": 20,
+            "measurements_per_circuit": 1726
+          },
+          "success": false,
+          "provider": "simulated"
+        },
+        {
+          "molecule": "NH3",
+          "molecule_name": "Аммиак",
+          "exact_energy": -56.6,
+          "quantum_energy": -5.04174031717251,
+          "classical_energy": -56.2782332665762,
+          "best_classical_method": "hartree_fock",
+          "quantum_accuracy": 0.9109233159510157,
+          "classical_accuracy": 0.005684924618795055,
+          "energy_error_quantum": 51.55825968282749,
+          "energy_error_classical": 0.32176673342380013,
+          "quantum_time": 0.00011992454528808594,
+          "classical_time": 2.384185791015625e-07,
+          "speedup_factor": 0.0019880715705765406,
+          "quantum_metrics": {
+            "coherence_time": 0.00014764668635115468,
+            "entanglement_fidelity": 0.9240927520081912,
+            "gate_error_rate": 0.002050032167725197,
+            "readout_error": 0.029623754324164347,
+            "t1_time": 4.7090839106661214e-05,
+            "t2_time": 2.899104696647383e-05,
+            "circuit_depth": 30,
+            "qubit_count": 7,
+            "ansatz_parameters": 20,
+            "measurements_per_circuit": 1474
+          },
+          "success": false,
+          "provider": "simulated"
+        },
+        {
+          "molecule": "C6H6",
+          "molecule_name": "Бензол",
+          "exact_energy": -230.7,
+          "quantum_energy": -20.96504183738441,
+          "classical_energy": -227.77662419043534,
+          "best_classical_method": "hartree_fock",
+          "quantum_accuracy": 0.9091242226381256,
+          "classical_accuracy": 0.01267176337045794,
+          "energy_error_quantum": 209.73495816261558,
+          "energy_error_classical": 2.9233758095646465,
+          "quantum_time": 0.00032520294189453125,
+          "classical_time": 9.5367431640625e-07,
+          "speedup_factor": 0.002932551319648094,
+          "quantum_metrics": {
+            "coherence_time": 0.00014750107589952708,
+            "entanglement_fidelity": 0.9163848484492605,
+            "gate_error_rate": 0.001967981001321859,
+            "readout_error": 0.02598692652121133,
+            "t1_time": 5.1228612553925055e-05,
+            "t2_time": 2.9089788539500903e-05,
+            "circuit_depth": 126,
+            "qubit_count": 23,
+            "ansatz_parameters": 84,
+            "measurements_per_circuit": 1837
+          },
+          "success": false,
+          "provider": "simulated"
+        }
+      ],
+      "analysis": {
+        "algorithm": "vqe",
+        "molecules_tested": 4,
+        "total_test_cases": 4,
+        "successful_runs": 0,
+        "success_rate": 0.0,
+        "average_quantum_accuracy": 0.7206999419076688,
+        "average_classical_accuracy": 0.016104092093672685,
+        "accuracy_improvement": 0.02234507200187319,
+        "average_speedup": 0.0023399972240668874,
+        "quantum_advantage_demonstrated": "False",
+        "total_quantum_time": 0.0008432865142822266,
+        "total_classical_time": 1.9073486328125e-06,
+        "timestamp": 1758814509.3411095
+      },
+      "accuracy_improvement": 0.02234507200187319,
+      "speedup_factor": 0.0023399972240668874,
+      "quantum_advantage": "False",
+      "success_rate": 0.0,
+      "metadata": {
+        "molecules": [
+          "H2",
+          "H2O",
+          "NH3",
+          "C6H6"
+        ],
+        "classical_methods": [
+          "molecular_mechanics",
+          "hartree_fock"
+        ],
+        "quantum_method": "vqe_simulation",
+        "basis_sets": "minimal_sto_3g"
+      }
+    }
+  },
+  "analysis": {
+    "total_demos": 4,
+    "successful_demos": 3,
+    "average_speedup": 1061.3664092817496,
+    "max_speedup": 3184.0924963110815,
+    "min_speedup": 0.0023399972240668874,
+    "algorithm_analysis": {
+      "shor": {
+        "speedup": 0.00439153694327075,
+        "problem_size": 0,
+        "success_rate": 0.1,
+        "quantum_advantage": "False"
+      },
+      "qaoa": {
+        "speedup": 3184.0924963110815,
+        "problem_size": 0,
+        "success_rate": 0.875,
+        "quantum_advantage": "True"
+      },
+      "vqe": {
+        "speedup": 0.0023399972240668874,
+        "problem_size": 0,
+        "success_rate": 0.0,
+        "quantum_advantage": "False"
+      }
+    },
+    "best_algorithm": "qaoa",
+    "quantum_supremacy_achieved": "True",
+    "timestamp": 1758814509.34926
+  },
+  "metadata": {
+    "framework_version": "x0tta6bl4-unified",
+    "quantum_providers": [
+      "ibm",
+      "google",
+      "xanadu"
+    ],
+    "algorithms_tested": [
+      "shor",
+      "grover",
+      "qaoa",
+      "vqe"
+    ]
+  }
+}

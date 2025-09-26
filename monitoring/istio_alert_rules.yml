@@ -1,0 +1,101 @@
+groups:
+  - name: x0tta6bl4_istio_alerts
+    rules:
+      - alert: IstioProxyDown
+        expr: up{job="istio-proxy"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Istio proxy is down"
+          description: "Istio proxy has been down for more than 1 minute on {{ $labels.instance }}"
+
+      - alert: IstioHighRequestLatency
+        expr: histogram_quantile(0.95, rate(istio_request_duration_milliseconds_bucket[5m])) > 5000
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High Istio request latency"
+          description: "95th percentile request latency is {{ $value }}ms"
+
+      - alert: IstioHighErrorRate
+        expr: rate(istio_requests_total{response_code=~"5.."}[5m]) / rate(istio_requests_total[5m]) > 0.05
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High Istio error rate"
+          description: "Error rate is {{ $value }}% across the service mesh"
+
+      - alert: IstioCircuitBreakerOpen
+        expr: istio_circuit_breaker_open{state="open"} == 1
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Istio circuit breaker is open"
+          description: "Circuit breaker is open for {{ $labels.destination_service_name }}"
+
+      - alert: IstioMutualTLSNotEnabled
+        expr: istio_mtls_connection_total{connection_security_policy!="mutual_tls"} > 0
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Mutual TLS not enabled"
+          description: "Non-mTLS connections detected: {{ $value }}"
+
+      - alert: IstioCrossRegionTrafficHigh
+        expr: rate(istio_tcp_connections_opened_total{destination_service_namespace="x0tta6bl4"}[5m]) > 100
+        for: 2m
+        labels:
+          severity: info
+        annotations:
+          summary: "High cross-region traffic"
+          description: "Cross-region connections opened: {{ $value }} per second"
+
+      - alert: IstioQuantumWorkloadLatency
+        expr: histogram_quantile(0.95, rate(istio_request_duration_milliseconds_bucket{source_workload_namespace="x0tta6bl4", destination_workload_name=~"quantum-.*"}[5m])) > 2000
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High quantum workload latency"
+          description: "Quantum workload 95th percentile latency is {{ $value }}ms"
+
+      - alert: IstioMLAccuracyEndpointDown
+        expr: up{job="istio-proxy", destination_workload_name=~"ai-agents.*"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "ML accuracy endpoint down"
+          description: "ML accuracy monitoring endpoint is unavailable"
+
+      - alert: IstioServiceMeshConnectivityLoss
+        expr: istio_tcp_connections_closed_total{connection_state="close"} > 10
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Service mesh connectivity issues"
+          description: "Multiple connection closures detected: {{ $value }}"
+
+      - alert: IstioPilotUnavailable
+        expr: up{job="istio-pilot"} == 0
+        for: 30s
+        labels:
+          severity: critical
+        annotations:
+          summary: "Istio Pilot unavailable"
+          description: "Istio control plane is unavailable"
+
+      - alert: IstioMixerUnavailable
+        expr: up{job="istio-mixer"} == 0
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Istio Mixer unavailable"
+          description: "Istio telemetry service is unavailable"

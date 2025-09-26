@@ -1,1 +1,7 @@
-"""Quantum Core Module for x0tta6bl4 Unified"""
+"""
+Quantum Core Module
+"""
+
+from .quantum_interface import QuantumCore
+
+__all__ = ['QuantumCore']

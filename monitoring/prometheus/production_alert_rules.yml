@@ -1,0 +1,144 @@
+groups:
+  - name: quantum_production_alerts
+    rules:
+      # Quantum-specific alerts
+      - alert: QuantumCoherenceLoss
+        expr: quantum_coherence_level < 0.8
+        for: 2m
+        labels:
+          severity: critical
+          component: quantum
+        annotations:
+          summary: "Quantum coherence loss detected"
+          description: "Quantum coherence level is {{ $value }}%, below 80% threshold"
+          runbook: "docs/runbooks/quantum_maintenance_runbook.md#coherence-loss"
+
+      - alert: QuantumGateErrors
+        expr: rate(quantum_gate_errors_total[5m]) > 0.01
+        for: 5m
+        labels:
+          severity: warning
+          component: quantum
+        annotations:
+          summary: "High quantum gate error rate"
+          description: "Quantum gate error rate is {{ $value }} over last 5 minutes"
+          runbook: "docs/runbooks/quantum_maintenance_runbook.md#gate-errors"
+
+      - alert: QuantumEntanglementDegradation
+        expr: quantum_entanglement_fidelity < 0.9
+        for: 3m
+        labels:
+          severity: critical
+          component: quantum
+        annotations:
+          summary: "Quantum entanglement degradation"
+          description: "Entanglement fidelity is {{ $value }}%, below 90% threshold"
+          runbook: "docs/runbooks/quantum_maintenance_runbook.md#entanglement-degradation"
+
+      # Hybrid algorithm alerts
+      - alert: HybridAlgorithmPerformanceDegradation
+        expr: hybrid_algorithm_performance_ratio < 0.95
+        for: 10m
+        labels:
+          severity: warning
+          component: hybrid
+        annotations:
+          summary: "Hybrid algorithm performance degradation"
+          description: "Performance ratio dropped to {{ $value }}%, below 95% threshold"
+
+      - alert: HybridAlgorithmAccuracyDrop
+        expr: hybrid_algorithm_accuracy < 0.85
+        for: 5m
+        labels:
+          severity: critical
+          component: hybrid
+        annotations:
+          summary: "Hybrid algorithm accuracy drop"
+          description: "Algorithm accuracy is {{ $value }}%, below 85% threshold"
+
+      # Edge AI alerts
+      - alert: EdgeAILatencySpike
+        expr: histogram_quantile(0.95, rate(edge_ai_request_duration_seconds_bucket[5m])) > 2.0
+        for: 5m
+        labels:
+          severity: warning
+          component: edge_ai
+        annotations:
+          summary: "Edge AI latency spike"
+          description: "95th percentile latency is {{ $value }}s, above 2s threshold"
+
+      - alert: EdgeAIEnergyConsumptionHigh
+        expr: rate(edge_ai_energy_consumption_watts[10m]) > 100
+        for: 10m
+        labels:
+          severity: warning
+          component: edge_ai
+        annotations:
+          summary: "High edge AI energy consumption"
+          description: "Energy consumption rate is {{ $value }} watts/minute"
+
+      # Quantum supremacy alerts
+      - alert: QuantumSupremacyCircuitDepthExceeded
+        expr: quantum_circuit_depth > 1000
+        for: 1m
+        labels:
+          severity: info
+          component: quantum_supremacy
+        annotations:
+          summary: "Quantum supremacy circuit depth exceeded"
+          description: "Circuit depth reached {{ $value }}, quantum supremacy threshold"
+
+      - alert: QuantumSupremacyExecutionTimeHigh
+        expr: quantum_execution_time_seconds > 3600
+        for: 5m
+        labels:
+          severity: warning
+          component: quantum_supremacy
+        annotations:
+          summary: "High quantum supremacy execution time"
+          description: "Execution time is {{ $value }} seconds, above 1 hour threshold"
+
+      # Backup and recovery alerts
+      - alert: QuantumBackupFailure
+        expr: backup_failure{type="quantum"} == 1
+        for: 1m
+        labels:
+          severity: critical
+          component: backup
+        annotations:
+          summary: "Quantum backup failure"
+          description: "Quantum state backup has failed"
+          runbook: "scripts/backup/disaster_recovery.sh"
+
+      - alert: ResearchDataBackupFailure
+        expr: backup_failure{type="research"} == 1
+        for: 1m
+        labels:
+          severity: critical
+          component: backup
+        annotations:
+          summary: "Research data backup failure"
+          description: "Research data backup has failed"
+          runbook: "scripts/backup/disaster_recovery.sh"
+
+      # Alert escalation rules
+      - alert: CriticalAlertEscalation
+        expr: ALERTS{severity="critical",alertstate="firing"} > 0
+        for: 15m
+        labels:
+          severity: critical
+          escalation: true
+        annotations:
+          summary: "Critical alert escalation"
+          description: "Critical alerts have been firing for 15+ minutes, escalate to on-call engineer"
+
+      - alert: QuantumSystemDown
+        expr: up{job="quantum-core"} == 0
+        for: 2m
+        labels:
+          severity: critical
+          component: quantum
+        annotations:
+          summary: "Quantum system is down"
+          description: "Quantum core service has been down for more than 2 minutes"
+          runbook: "docs/runbooks/quantum_maintenance_runbook.md#system-down"

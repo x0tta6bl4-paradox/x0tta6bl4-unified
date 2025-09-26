@@ -1,0 +1,156 @@
+{
+  "report_title": "x0tta6bl4 Quantum Business Analytics - Compliance Verification Report",
+  "generated_at": "2025-09-25T23:23:07.898277+00:00",
+  "system": "x0tta6bl4-quantum-business-analytics",
+  "report_period": "2025-09-25T23:23:07.894097+00:00",
+  "executive_summary": {
+    "overall_compliance_status": "PASS",
+    "regions_assessed": 7,
+    "regions_compliant": 7,
+    "gdpr_compliance_rate": "7/7",
+    "hipaa_compliance_rate": "7/7",
+    "quantum_security_rate": "7/7",
+    "key_findings": [
+      "All regions demonstrate compliance with applicable regulations",
+      "GDPR compliance: 7/7 regions",
+      "HIPAA compliance: 7/7 regions",
+      "Quantum security: 7/7 regions"
+    ]
+  },
+  "regional_compliance": {
+    "us-east-1": {
+      "overall_status": "PASS",
+      "gdpr_status": "PASS",
+      "hipaa_status": "PASS",
+      "quantum_status": "PASS",
+      "config": {
+        "gdpr_applicable": false,
+        "hipaa_applicable": true,
+        "data_residency": "US",
+        "sovereign_laws": [
+          "US Federal",
+          "HIPAA"
+        ],
+        "encryption_required": true
+      }
+    },
+    "us-west-2": {
+      "overall_status": "PASS",
+      "gdpr_status": "PASS",
+      "hipaa_status": "PASS",
+      "quantum_status": "PASS",
+      "config": {
+        "gdpr_applicable": false,
+        "hipaa_applicable": true,
+        "data_residency": "US",
+        "sovereign_laws": [
+          "US Federal",
+          "HIPAA"
+        ],
+        "encryption_required": true
+      }
+    },
+    "eu-west-1": {
+      "overall_status": "PASS",
+      "gdpr_status": "PASS",
+      "hipaa_status": "PASS",
+      "quantum_status": "PASS",
+      "config": {
+        "gdpr_applicable": true,
+        "hipaa_applicable": false,
+        "data_residency": "EU",
+        "sovereign_laws": [
+          "GDPR",
+          "EU Data Protection"
+        ],
+        "encryption_required": true
+      }
+    },
+    "eu-central-1": {
+      "overall_status": "PASS",
+      "gdpr_status": "PASS",
+      "hipaa_status": "PASS",
+      "quantum_status": "PASS",
+      "config": {
+        "gdpr_applicable": true,
+        "hipaa_applicable": false,
+        "data_residency": "EU",
+        "sovereign_laws": [
+          "GDPR",
+          "EU Data Protection"
+        ],
+        "encryption_required": true
+      }
+    },
+    "ap-southeast-1": {
+      "overall_status": "PASS",
+      "gdpr_status": "PASS",
+      "hipaa_status": "PASS",
+      "quantum_status": "PASS",
+      "config": {
+        "gdpr_applicable": false,
+        "hipaa_applicable": false,
+        "data_residency": "APAC",
+        "sovereign_laws": [
+          "Singapore PDPA"
+        ],
+        "encryption_required": true
+      }
+    },
+    "ap-northeast-1": {
+      "overall_status": "PASS",
+      "gdpr_status": "PASS",
+      "hipaa_status": "PASS",
+      "quantum_status": "PASS",
+      "config": {
+        "gdpr_applicable": false,
+        "hipaa_applicable": false,
+        "data_residency": "APAC",
+        "sovereign_laws": [
+          "Japan APPI"
+        ],
+        "encryption_required": true
+      }
+    },
+    "sa-east-1": {
+      "overall_status": "PASS",
+      "gdpr_status": "PASS",
+      "hipaa_status": "PASS",
+      "quantum_status": "PASS",
+      "config": {
+        "gdpr_applicable": false,
+        "hipaa_applicable": false,
+        "data_residency": "LATAM",
+        "sovereign_laws": [
+          "Brazil LGPD"
+        ],
+        "encryption_required": true
+      }
+    }
+  },
+  "compliance_gaps": [],
+  "recommendations": [
+    "Ensure GDPR compliance in EU regions with data residency controls",
+    "Maintain HIPAA compliance in US regions with PHI protection measures",
+    "Implement continuous monitoring for quantum security standards",
+    "Regular audit logging and review processes"
+  ],
+  "audit_findings": [
+    {
+      "timestamp": "2025-09-25T23:23:07.896425+00:00",
+      "event_type": "COMPLIANCE_CHECK_COMPLETED",
+      "details": {
+        "regions_checked": 7,
+        "findings": {
+          "total_regions": 7,
+          "passed_regions": 7,
+          "failed_regions": 0,
+          "gdpr_compliance": "7/7",
+          "hipaa_compliance": "7/7",
+          "quantum_security": "7/7",
+          "overall_compliance": "PASS"
+        }
+      }
+    }
+  ]
+}

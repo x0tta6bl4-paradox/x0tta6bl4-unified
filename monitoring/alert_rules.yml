@@ -1,0 +1,374 @@
+groups:
+  - name: x0tta6bl4_system_alerts
+    rules:
+      - alert: HighCPUUsage
+        expr: 100 - (avg by(instance) (irate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High CPU usage detected"
+          description: "CPU usage is {{ $value }}% on {{ $labels.instance }}"
+
+      - alert: HighMemoryUsage
+        expr: 100 - ((node_memory_MemAvailable_bytes / node_memory_MemTotal_bytes) * 100) > 90
+        for: 5m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High memory usage detected"
+          description: "Memory usage is {{ $value }}% on {{ $labels.instance }}"
+
+      - alert: HighDiskUsage
+        expr: (node_filesystem_avail_bytes / node_filesystem_size_bytes) < 0.1
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High disk usage detected"
+          description: "Disk usage is above 90% on {{ $labels.instance }}"
+
+  - name: x0tta6bl4_component_alerts
+    rules:
+      - alert: QuantumComponentDown
+        expr: up{job="x0tta6bl4-quantum"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Quantum component is down"
+          description: "Quantum component has been down for more than 1 minute"
+
+      - alert: AIComponentDown
+        expr: up{job="x0tta6bl4-ai"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "AI component is down"
+          description: "AI component has been down for more than 1 minute"
+
+      - alert: EnterpriseComponentDown
+        expr: up{job="x0tta6bl4-enterprise"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Enterprise component is down"
+          description: "Enterprise component has been down for more than 1 minute"
+
+      - alert: BillingComponentDown
+        expr: up{job="x0tta6bl4-billing"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Billing component is down"
+          description: "Billing component has been down for more than 1 minute"
+
+  - name: x0tta6bl4_performance_alerts
+    rules:
+      - alert: HighQuantumErrorRate
+        expr: x0tta6bl4_quantum_error_rate > 5
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High quantum error rate"
+          description: "Quantum error rate is {{ $value }}%"
+
+      - alert: LowAIModelAccuracy
+        expr: x0tta6bl4_ai_model_accuracy < 80
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low AI model accuracy"
+          description: "AI model accuracy dropped to {{ $value }}%"
+
+      - alert: HighEnterpriseResponseTime
+        expr: histogram_quantile(0.95, rate(x0tta6bl4_enterprise_response_time_seconds_bucket[5m])) > 2
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High enterprise response time"
+          description: "95th percentile response time is {{ $value }}s"
+
+      - alert: HighBillingFailedPayments
+        expr: rate(x0tta6bl4_billing_failed_payments_total[5m]) > 0.1
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High rate of failed payments"
+          description: "Failed payment rate is {{ $value }} per second"
+
+      - alert: LowBillingConversionRate
+        expr: x0tta6bl4_billing_conversion_rate < 70
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low billing conversion rate"
+          description: "Payment conversion rate dropped to {{ $value }}%"
+
+  - name: x0tta6bl4_business_alerts
+    rules:
+      - alert: LowActiveUsers
+        expr: x0tta6bl4_enterprise_active_users < 50
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Low number of active users"
+          description: "Active users dropped to {{ $value }}"
+
+      - alert: HighPaymentDisputes
+        expr: x0tta6bl4_billing_active_disputes > 10
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High number of payment disputes"
+          description: "Active payment disputes: {{ $value }}"
+
+      - alert: QuantumMemoryHigh
+        expr: x0tta6bl4_quantum_memory_bytes > 400000000
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High quantum memory usage"
+          description: "Quantum memory usage is {{ $value }} bytes"
+
+  - name: x0tta6bl4_backup_alerts
+    rules:
+       - alert: BackupJobFailed
+         expr: backup_failure{type=~".+"} == 1
+         for: 1m
+         labels:
+           severity: critical
+         annotations:
+           summary: "Backup job failed"
+           description: "Backup failed for {{ $labels.type }} component"
+
+       - alert: BackupNotRunRecently
+         expr: (time() - backup_last_success) > 86400
+         for: 5m
+         labels:
+           severity: warning
+         annotations:
+           summary: "Backup not run recently"
+           description: "Last successful backup was more than 24 hours ago"
+
+       - alert: RestoreJobFailed
+         expr: restore_failure{type=~".+"} == 1
+         for: 1m
+         labels:
+           severity: critical
+         annotations:
+           summary: "Restore job failed"
+           description: "Restore failed for {{ $labels.type }} component"
+
+       - alert: LowBackupStorageSpace
+         expr: (node_filesystem_avail_bytes{mountpoint="/backups"} / node_filesystem_size_bytes{mountpoint="/backups"}) < 0.1
+         for: 5m
+         labels:
+           severity: warning
+         annotations:
+           summary: "Low backup storage space"
+           description: "Backup storage has less than 10% free space"
+
+       - alert: BackupTestFailed
+         expr: test_backup_restore_success == 0
+         for: 1m
+         labels:
+           severity: warning
+         annotations:
+           summary: "Backup/restore test failed"
+           description: "Automated backup/restore testing has failed"
+
+  - name: x0tta6bl4_resilience_alerts
+    rules:
+      - alert: HighFailureRate
+        expr: rate(x0tta6bl4_service_failures_total[5m]) / rate(x0tta6bl4_service_requests_total[5m]) > 0.1
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High service failure rate detected"
+          description: "Service failure rate is {{ $value }}% over the last 5 minutes"
+
+      - alert: CircuitBreakerOpen
+        expr: x0tta6bl4_circuit_breaker_state{state="open"} == 1
+        for: 30s
+        labels:
+          severity: warning
+        annotations:
+          summary: "Circuit breaker is open"
+          description: "Circuit breaker for {{ $labels.service }} is in open state"
+
+      - alert: HighRetryRate
+        expr: rate(x0tta6bl4_retry_attempts_total[5m]) > 10
+        for: 2m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High retry rate detected"
+          description: "Retry attempts rate is {{ $value }} per second"
+
+      - alert: ServiceDegraded
+        expr: x0tta6bl4_service_health_status < 1
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Service is in degraded state"
+          description: "Service {{ $labels.service }} is operating in degraded mode"
+
+      - alert: RecoveryTimeExceeded
+        expr: x0tta6bl4_service_recovery_time_seconds > 300
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Service recovery time exceeded"
+          description: "Service recovery took {{ $value }} seconds, exceeding 5 minute threshold"
+
+      - alert: QuantumNoiseHigh
+        expr: x0tta6bl4_quantum_noise_factor > 1.5
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High quantum noise detected"
+          description: "Quantum noise factor is {{ $value }}, indicating degraded quantum performance"
+
+      - alert: EntanglementDegradation
+        expr: x0tta6bl4_quantum_entanglement_fidelity < 0.9
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Quantum entanglement degradation"
+          description: "Entanglement fidelity dropped to {{ $value }}, below acceptable threshold"
+
+      - alert: GateErrorRateHigh
+        expr: rate(x0tta6bl4_quantum_gate_errors_total[5m]) > 0.05
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High quantum gate error rate"
+          description: "Quantum gate error rate is {{ $value }} per second"
+
+      - alert: CoherenceTimeLow
+        expr: x0tta6bl4_quantum_coherence_time_seconds < 10
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Low quantum coherence time"
+          description: "Quantum coherence time is only {{ $value }} seconds"
+
+      - alert: ChaosTestActive
+        expr: x0tta6bl4_chaos_test_active == 1
+        for: 0s
+        labels:
+          severity: info
+        annotations:
+          summary: "Chaos engineering test is active"
+          description: "Chaos test '{{ $labels.test_name }}' is currently running on {{ $labels.service }}"
+
+      - alert: ResilienceThresholdExceeded
+        expr: x0tta6bl4_resilience_score < 0.8
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Resilience score below threshold"
+          description: "System resilience score dropped to {{ $value }}, indicating reduced fault tolerance"
+
+      - alert: MultiComponentFailure
+        expr: count(x0tta6bl4_service_health_status < 1) > 2
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Multiple components failing simultaneously"
+          description: "{{ $value }} services are currently in failed or degraded state"
+
+      - alert: RecoveryStalled
+        expr: x0tta6bl4_recovery_in_progress == 1 and changes(x0tta6bl4_recovery_in_progress[10m]) == 0
+        for: 10m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Service recovery appears stalled"
+          description: "Recovery process for {{ $labels.service }} has not progressed for 10 minutes"
+
+  - name: x0tta6bl4_load_balancing_alerts
+    rules:
+      - alert: HighGlobalLatency
+        expr: histogram_quantile(0.95, rate(istio_request_duration_milliseconds_bucket{reporter="source"}[5m])) > 500
+        for: 3m
+        labels:
+          severity: warning
+        annotations:
+          summary: "High global request latency detected"
+          description: "95th percentile request latency is {{ $value }}ms across global load balancer"
+
+      - alert: LoadBalancerFailure
+        expr: istio_requests_total{response_code=~"5..", reporter="source"} / istio_requests_total{reporter="source"} > 0.05
+        for: 2m
+        labels:
+          severity: critical
+        annotations:
+          summary: "High load balancer failure rate"
+          description: "Load balancer error rate is {{ $value }}%"
+
+      - alert: UnevenTrafficDistribution
+        expr: stddev(istio_requests_total{reporter="source"}) / avg(istio_requests_total{reporter="source"}) > 0.5
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Uneven traffic distribution across regions"
+          description: "Traffic distribution variance is {{ $value }}, indicating potential load balancing issues"
+
+      - alert: RegionOverload
+        expr: istio_requests_total{reporter="source", destination_service_name=~".*"} > 1000
+        for: 1m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Region experiencing high load"
+          description: "Region {{ $labels.destination_service_name }} is handling {{ $value }} requests per second"
+
+      - alert: CrossRegionTrafficHigh
+        expr: rate(istio_tcp_sent_bytes_total{destination_service_name=~".*", source_workload_namespace!="destination_workload_namespace"}[5m]) > 1000000
+        for: 3m
+        labels:
+          severity: info
+        annotations:
+          summary: "High cross-region traffic detected"
+          description: "Cross-region traffic rate is {{ $value }} bytes/second"
+
+      - alert: LocalityLoadBalancingDegraded
+        expr: istio_request_duration_milliseconds{reporter="source", source_workload_namespace!=destination_workload_namespace} / istio_request_duration_milliseconds{reporter="source", source_workload_namespace==destination_workload_namespace} > 2
+        for: 5m
+        labels:
+          severity: warning
+        annotations:
+          summary: "Locality load balancing performance degraded"
+          description: "Cross-region requests are {{ $value }}x slower than local requests"
+
+      - alert: GlobalLoadBalancerDown
+        expr: up{job="x0tta6bl4-global-gateway"} == 0
+        for: 1m
+        labels:
+          severity: critical
+        annotations:
+          summary: "Global load balancer gateway is down"
+          description: "Global Istio Gateway has been unreachable for more than 1 minute"

@@ -3,21 +3,23 @@
 Конфигурация Billing для x0tta6bl4 Unified
 """
 
+import os
+
 BILLING_PROVIDERS = {
     "stripe": {
         "enabled": True,
-        "public_key": "pk_test_...",
-        "secret_key": "sk_test_..."
+        "public_key": os.getenv("STRIPE_PUBLIC_KEY"),
+        "secret_key": os.getenv("STRIPE_SECRET_KEY")
     },
     "paypal": {
         "enabled": True,
-        "client_id": "your_paypal_client_id",
-        "client_secret": "your_paypal_client_secret"
+        "client_id": os.getenv("PAYPAL_CLIENT_ID"),
+        "client_secret": os.getenv("PAYPAL_CLIENT_SECRET")
     },
     "yookassa": {
         "enabled": True,
-        "shop_id": "your_shop_id",
-        "secret_key": "your_secret_key"
+        "shop_id": os.getenv("YOOKASSA_SHOP_ID"),
+        "secret_key": os.getenv("YOOKASSA_SECRET_KEY")
     }
 }
 

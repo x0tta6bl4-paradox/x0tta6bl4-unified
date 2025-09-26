@@ -258,7 +258,7 @@ services:
     environment:
       POSTGRES_DB: x0tta6bl4_unified
       POSTGRES_USER: x0tta6bl4
-      POSTGRES_PASSWORD: x0tta6bl4_password
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-x0tta6bl4_password}
     ports:
       - "5432:5432"
     volumes:
@@ -299,7 +299,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      - GF_SECURITY_ADMIN_PASSWORD=admin
+      - GF_SECURITY_ADMIN_PASSWORD=${GRAFANA_ADMIN_PASSWORD:-admin}
     volumes:
       - grafana_data:/var/lib/grafana
     depends_on:

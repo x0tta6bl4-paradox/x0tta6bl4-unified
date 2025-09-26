@@ -1,0 +1,1066 @@
+openapi: 3.0.3
+info:
+  title: x0tta6bl4 Unified Platform API
+  description: |
+    Полный API для x0tta6bl4 Unified Platform, включающий квантовые вычисления,
+    продвинутые AI/ML алгоритмы, enterprise функции и биллинг.
+
+    ## Основные возможности:
+    - **Quantum Computing**: VQE, QAOA, Quantum ML, Bypass Solver
+    - **Advanced AI/ML**: Quantum Neural Networks, Phi-Harmonic Learning, Consciousness Evolution
+    - **Enterprise**: Multi-tenant, security, monitoring
+    - **Billing**: Usage tracking, subscriptions, payments
+
+    ## Аутентификация
+    API использует JWT токены для аутентификации:
+    ```
+    Authorization: Bearer <your-jwt-token>
+    ```
+  version: "1.0.0"
+  contact:
+    name: x0tta6bl4 Support
+    email: support@x0tta6bl4.com
+    url: https://x0tta6bl4.com/support
+  license:
+    name: Proprietary
+    url: https://x0tta6bl4.com/license
+
+servers:
+  - url: https://api.x0tta6bl4.com/v1
+    description: Production server
+  - url: http://localhost:8000/api/v1
+    description: Local development server
+
+security:
+  - bearerAuth: []
+
+paths:
+  # System endpoints
+  /:
+    get:
+      summary: Корневая информация о платформе
+      responses:
+        '200':
+          description: Информация о платформе
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PlatformInfo'
+
+  /health:
+    get:
+      summary: Проверка здоровья системы
+      responses:
+        '200':
+          description: Статус здоровья
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/HealthStatus'
+
+  # Advanced AI/ML API
+  /ai/advanced/status:
+    get:
+      summary: Статус продвинутой AI/ML системы
+      responses:
+        '200':
+          description: Статус AI/ML системы
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/AIMLStatus'
+
+  /ai/advanced/train:
+    post:
+      summary: Обучение модели с продвинутыми алгоритмами
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/TrainingRequest'
+      responses:
+        '200':
+          description: Результат обучения
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/TrainingResult'
+        '400':
+          description: Ошибка валидации данных
+
+  /ai/advanced/predict:
+    post:
+      summary: Предсказание с использованием обученной модели
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/PredictionRequest'
+      responses:
+        '200':
+          description: Результат предсказания
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/PredictionResponse'
+
+  /ai/advanced/models/{model_id}/performance:
+    get:
+      summary: Получение производительности модели
+      parameters:
+        - name: model_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метрики производительности
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/ModelPerformance'
+        '404':
+          description: Модель не найдена
+
+  /ai/advanced/transfer-knowledge:
+    post:
+      summary: Перенос знаний между моделями
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/KnowledgeTransferRequest'
+      responses:
+        '200':
+          description: Результат переноса знаний
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/KnowledgeTransferResponse'
+
+  /ai/advanced/system-stats:
+    get:
+      summary: Получение статистики AI/ML системы
+      responses:
+        '200':
+          description: Статистика системы
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SystemStats'
+
+  # Quantum Supremacy API
+  /quantum/supremacy/status:
+    get:
+      summary: Статус квантовых алгоритмов supremacy
+      responses:
+        '200':
+          description: Статус quantum supremacy
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuantumSupremacyStatus'
+
+  /quantum/supremacy/bypass:
+    post:
+      summary: Решение проблемы обхода блокировок
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/BypassRequest'
+      responses:
+        '200':
+          description: Результат обхода
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BypassResult'
+
+  /quantum/supremacy/optimize:
+    post:
+      summary: Квантовая оптимизация параметров
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/OptimizationRequest'
+      responses:
+        '200':
+          description: Результат оптимизации
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OptimizationResult'
+
+  # Legacy Quantum API
+  /quantum/status:
+    get:
+      summary: Статус квантовых сервисов
+      responses:
+        '200':
+          description: Статус quantum сервисов
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/QuantumStatus'
+
+  /quantum/circuit:
+    post:
+      summary: Выполнение квантовой схемы
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/CircuitRequest'
+      responses:
+        '200':
+          description: Результат выполнения
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/CircuitResponse'
+
+  /quantum/jobs/{job_id}:
+    get:
+      summary: Получение результатов квантового вычисления
+      parameters:
+        - name: job_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Результаты job
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/JobResult'
+
+  # Enterprise API
+  /enterprise/status:
+    get:
+      summary: Статус enterprise сервисов
+      responses:
+        '200':
+          description: Статус enterprise
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/EnterpriseStatus'
+
+  /enterprise/users:
+    post:
+      summary: Создание нового пользователя
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/UserCreateRequest'
+      responses:
+        '201':
+          description: Пользователь создан
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/UserResponse'
+
+  /enterprise/organizations/{org_id}/metrics:
+    get:
+      summary: Получение метрик организации
+      parameters:
+        - name: org_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Метрики организации
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/OrganizationMetrics'
+
+  # Billing API
+  /billing/status:
+    get:
+      summary: Статус биллинговых сервисов
+      responses:
+        '200':
+          description: Статус billing
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/BillingStatus'
+
+  /billing/subscriptions:
+    post:
+      summary: Создание подписки
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              $ref: '#/components/schemas/SubscriptionRequest'
+      responses:
+        '201':
+          description: Подписка создана
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/SubscriptionResponse'
+
+  /billing/invoices/{invoice_id}:
+    get:
+      summary: Получение счета
+      parameters:
+        - name: invoice_id
+          in: path
+          required: true
+          schema:
+            type: string
+      responses:
+        '200':
+          description: Детали счета
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/InvoiceResponse'
+
+components:
+  securitySchemes:
+    bearerAuth:
+      type: http
+      scheme: bearer
+      bearerFormat: JWT
+
+  schemas:
+    # Common schemas
+    PlatformInfo:
+      type: object
+      properties:
+        message:
+          type: string
+          example: "x0tta6bl4 Unified Platform"
+        version:
+          type: string
+          example: "1.0.0"
+        status:
+          type: string
+          example: "operational"
+        timestamp:
+          type: string
+          format: date-time
+        components:
+          type: object
+          properties:
+            quantum:
+              type: string
+              example: "active"
+            ai:
+              type: string
+              example: "active"
+            enterprise:
+              type: string
+              example: "active"
+            billing:
+              type: string
+              example: "active"
+            api:
+              type: string
+              example: "active"
+
+    HealthStatus:
+      type: object
+      properties:
+        status:
+          type: string
+          example: "healthy"
+        timestamp:
+          type: string
+          format: date-time
+        components:
+          type: object
+          properties:
+            quantum:
+              type: string
+              example: "healthy"
+            ai:
+              type: string
+              example: "healthy"
+            enterprise:
+              type: string
+              example: "healthy"
+            billing:
+              type: string
+              example: "healthy"
+
+    # AI/ML schemas
+    AIMLStatus:
+      type: object
+      properties:
+        name:
+          type: string
+          example: "advanced_ai_ml_system"
+        status:
+          type: string
+          example: "operational"
+        models_count:
+          type: integer
+          example: 5
+        trained_models_count:
+          type: integer
+          example: 3
+        quantum_integration:
+          type: boolean
+          example: true
+        algorithms:
+          type: array
+          items:
+            type: string
+          example: ["quantum_neural_network", "phi_harmonic_learning"]
+        model_types:
+          type: array
+          items:
+            type: string
+          example: ["classification", "regression"]
+        stats:
+          $ref: '#/components/schemas/AIMLStats'
+        healthy:
+          type: boolean
+          example: true
+
+    AIMLStats:
+      type: object
+      properties:
+        models_trained:
+          type: integer
+          example: 3
+        total_training_time:
+          type: number
+          example: 45.67
+        quantum_supremacy_achieved:
+          type: integer
+          example: 2
+        phi_harmony_optimizations:
+          type: integer
+          example: 1
+        consciousness_evolutions:
+          type: integer
+          example: 2
+        knowledge_transfers:
+          type: integer
+          example: 1
+
+    TrainingRequest:
+      type: object
+      required:
+        - model_config
+        - training_data
+        - target_data
+      properties:
+        model_config:
+          $ref: '#/components/schemas/ModelConfig'
+        training_data:
+          type: string
+          description: Base64 encoded numpy array
+        target_data:
+          type: string
+          description: Base64 encoded numpy array
+        validation_data:
+          type: object
+          properties:
+            inputs:
+              type: string
+            targets:
+              type: string
+
+    ModelConfig:
+      type: object
+      required:
+        - model_id
+        - model_type
+        - algorithm
+        - input_dimensions
+        - output_dimensions
+      properties:
+        model_id:
+          type: string
+          example: "quantum_classifier_v1"
+        model_type:
+          type: string
+          enum: ["classification", "regression", "clustering", "reinforcement", "generative", "quantum_enhanced", "consciousness_based"]
+        algorithm:
+          type: string
+          enum: ["quantum_neural_network", "phi_harmonic_learning", "consciousness_evolution", "quantum_reinforcement", "multiversal_learning", "telepathic_collaboration", "adaptive_optimization", "quantum_transfer_learning"]
+        input_dimensions:
+          type: integer
+          example: 784
+        output_dimensions:
+          type: integer
+          example: 10
+        hidden_layers:
+          type: array
+          items:
+            type: integer
+          example: [256, 128, 64]
+        learning_rate:
+          type: number
+          example: 0.01618
+        batch_size:
+          type: integer
+          example: 32
+        epochs:
+          type: integer
+          example: 100
+        quantum_enhanced:
+          type: boolean
+          example: true
+        phi_optimization:
+          type: boolean
+          example: true
+        consciousness_integration:
+          type: boolean
+          example: true
+
+    TrainingResult:
+      type: object
+      properties:
+        model_id:
+          type: string
+        status:
+          type: string
+          enum: ["initializing", "training", "validating", "optimizing", "completed", "failed", "paused"]
+        final_metrics:
+          $ref: '#/components/schemas/TrainingMetrics'
+        training_time:
+          type: number
+        quantum_supremacy_achieved:
+          type: boolean
+        phi_harmony_score:
+          type: number
+        consciousness_level:
+          type: number
+        model_performance:
+          type: object
+          additionalProperties: true
+
+    TrainingMetrics:
+      type: object
+      properties:
+        epoch:
+          type: integer
+        loss:
+          type: number
+        accuracy:
+          type: number
+        precision:
+          type: number
+        recall:
+          type: number
+        f1_score:
+          type: number
+        quantum_coherence:
+          type: number
+        phi_harmony:
+          type: number
+        consciousness_level:
+          type: number
+        timestamp:
+          type: string
+          format: date-time
+
+    PredictionRequest:
+      type: object
+      required:
+        - model_id
+        - inputs
+      properties:
+        model_id:
+          type: string
+        inputs:
+          type: string
+          description: Base64 encoded numpy array
+
+    PredictionResponse:
+      type: object
+      properties:
+        predictions:
+          type: string
+          description: Base64 encoded prediction array
+        model_id:
+          type: string
+        processing_time:
+          type: number
+        quantum_coherence:
+          type: number
+        consciousness_boost:
+          type: number
+
+    ModelPerformance:
+      type: object
+      properties:
+        model_id:
+          type: string
+        status:
+          type: string
+        final_metrics:
+          $ref: '#/components/schemas/TrainingMetrics'
+        training_time:
+          type: number
+        quantum_supremacy:
+          type: boolean
+        phi_harmony_score:
+          type: number
+        consciousness_level:
+          type: number
+        performance:
+          type: object
+          additionalProperties: true
+        training_history_length:
+          type: integer
+        best_epoch:
+          type: integer
+
+    KnowledgeTransferRequest:
+      type: object
+      required:
+        - source_model_id
+        - target_model_id
+        - transfer_ratio
+      properties:
+        source_model_id:
+          type: string
+        target_model_id:
+          type: string
+        transfer_ratio:
+          type: number
+          minimum: 0
+          maximum: 1
+
+    KnowledgeTransferResponse:
+      type: object
+      properties:
+        success:
+          type: boolean
+        source_model:
+          type: string
+        target_model:
+          type: string
+        transfer_ratio:
+          type: number
+        message:
+          type: string
+
+    SystemStats:
+      type: object
+      properties:
+        total_models:
+          type: integer
+        completed_trainings:
+          type: integer
+        failed_trainings:
+          type: integer
+        stats:
+          $ref: '#/components/schemas/AIMLStats'
+        transfer_learning_stats:
+          type: object
+          properties:
+            total_transfers:
+              type: integer
+            unique_source_models:
+              type: integer
+            unique_target_models:
+              type: integer
+            average_transfer_ratio:
+              type: number
+            knowledge_base_size:
+              type: integer
+        average_training_time:
+          type: number
+        quantum_supremacy_rate:
+          type: number
+        phi_harmony_rate:
+          type: number
+        consciousness_evolution_rate:
+          type: number
+        knowledge_transfer_rate:
+          type: number
+
+    # Quantum schemas
+    QuantumSupremacyStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        algorithms:
+          type: object
+          additionalProperties:
+            type: string
+        active_solutions:
+          type: integer
+        total_solutions_attempted:
+          type: integer
+        success_rate:
+          type: number
+        average_execution_time:
+          type: number
+        quantum_resources:
+          type: object
+          properties:
+            qubits_used:
+              type: integer
+            circuits_executed:
+              type: integer
+            optimization_iterations:
+              type: integer
+
+    BypassRequest:
+      type: object
+      required:
+        - target_domain
+      properties:
+        target_domain:
+          type: string
+          example: "youtube.com"
+        optimization_params:
+          type: object
+          properties:
+            max_iterations:
+              type: integer
+              default: 50
+            tolerance:
+              type: number
+              default: 0.0001
+            quantum_layers:
+              type: integer
+              default: 2
+
+    BypassResult:
+      type: object
+      properties:
+        success:
+          type: boolean
+        method:
+          type: string
+        target_domain:
+          type: string
+        alternative_domains:
+          type: array
+          items:
+            type: string
+        quantum_energy:
+          type: number
+        confidence:
+          type: number
+        execution_time:
+          type: number
+        connection_params:
+          type: object
+          properties:
+            timeout:
+              type: integer
+            retries:
+              type: integer
+            user_agent:
+              type: string
+            quantum_energy:
+              type: number
+        error_message:
+          type: string
+
+    OptimizationRequest:
+      type: object
+      required:
+        - target_domain
+        - circuit_params
+        - optimization_target
+      properties:
+        target_domain:
+          type: string
+        circuit_params:
+          type: object
+          properties:
+            qubits:
+              type: integer
+            depth:
+              type: integer
+            measurements:
+              type: array
+              items:
+                type: integer
+        optimization_target:
+          type: string
+          enum: ["connection_stability", "speed", "reliability"]
+
+    OptimizationResult:
+      type: object
+      properties:
+        optimized_params:
+          type: object
+          additionalProperties: true
+        optimization_metrics:
+          type: object
+          properties:
+            iterations:
+              type: integer
+            convergence:
+              type: number
+            ground_state_energy:
+              type: number
+            optimization_time:
+              type: number
+        circuit_info:
+          type: object
+          properties:
+            qubits:
+              type: integer
+            depth:
+              type: integer
+            gates:
+              type: integer
+            parameters_optimized:
+              type: integer
+
+    # Legacy quantum schemas
+    QuantumStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        backends:
+          type: array
+          items:
+            type: string
+        active_jobs:
+          type: integer
+        queue_length:
+          type: integer
+
+    CircuitRequest:
+      type: object
+      required:
+        - circuit
+      properties:
+        circuit:
+          type: object
+          properties:
+            qubits:
+              type: integer
+            gates:
+              type: array
+              items:
+                type: object
+                properties:
+                  type:
+                    type: string
+                  qubit:
+                    type: integer
+                  control:
+                    type: integer
+                  target:
+                    type: integer
+                  param:
+                    type: number
+        shots:
+          type: integer
+          default: 1024
+        backend:
+          type: string
+          default: "ibmq_qasm_simulator"
+
+    CircuitResponse:
+      type: object
+      properties:
+        job_id:
+          type: string
+        status:
+          type: string
+        estimated_time:
+          type: string
+        result_url:
+          type: string
+
+    JobResult:
+      type: object
+      properties:
+        job_id:
+          type: string
+        status:
+          type: string
+        result:
+          type: object
+          properties:
+            counts:
+              type: object
+              additionalProperties:
+                type: integer
+            probabilities:
+              type: object
+              additionalProperties:
+                type: number
+        execution_time:
+          type: string
+        backend:
+          type: string
+
+    # Enterprise schemas
+    EnterpriseStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        services:
+          type: array
+          items:
+            type: string
+        active_users:
+          type: integer
+        uptime:
+          type: string
+
+    UserCreateRequest:
+      type: object
+      required:
+        - email
+        - name
+        - role
+      properties:
+        email:
+          type: string
+          format: email
+        name:
+          type: string
+        role:
+          type: string
+        organization:
+          type: string
+
+    UserResponse:
+      type: object
+      properties:
+        user_id:
+          type: string
+        email:
+          type: string
+        status:
+          type: string
+        created_at:
+          type: string
+          format: date-time
+
+    OrganizationMetrics:
+      type: object
+      properties:
+        organization_id:
+          type: string
+        metrics:
+          type: object
+          properties:
+            active_users:
+              type: integer
+            api_calls:
+              type: integer
+            storage_used:
+              type: string
+            quantum_jobs:
+              type: integer
+        period:
+          type: string
+
+    # Billing schemas
+    BillingStatus:
+      type: object
+      properties:
+        status:
+          type: string
+        currency:
+          type: string
+        active_subscriptions:
+          type: integer
+        monthly_revenue:
+          type: integer
+
+    SubscriptionRequest:
+      type: object
+      required:
+        - user_id
+        - plan
+        - billing_cycle
+        - payment_method
+      properties:
+        user_id:
+          type: string
+        plan:
+          type: string
+        billing_cycle:
+          type: string
+          enum: ["monthly", "yearly"]
+        payment_method:
+          type: object
+          properties:
+            type:
+              type: string
+              enum: ["card", "bank", "crypto"]
+            token:
+              type: string
+
+    SubscriptionResponse:
+      type: object
+      properties:
+        subscription_id:
+          type: string
+        status:
+          type: string
+        plan:
+          type: string
+        amount:
+          type: integer
+        currency:
+          type: string
+        next_billing:
+          type: string
+          format: date-time
+
+    InvoiceResponse:
+      type: object
+      properties:
+        invoice_id:
+          type: string
+        subscription_id:
+          type: string
+        amount:
+          type: integer
+        currency:
+          type: string
+        status:
+          type: string
+        items:
+          type: array
+          items:
+            type: object
+            properties:
+              description:
+                type: string
+              quantity:
+                type: integer
+              unit_price:
+                type: integer
+              total:
+                type: integer
+        created_at:
+          type: string
+          format: date-time
+        paid_at:
+          type: string
+          format: date-time

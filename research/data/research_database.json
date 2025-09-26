@@ -1,0 +1,32 @@
+[
+  {
+    "experiment_id": "persist_test",
+    "algorithm": "test",
+    "problem_size": 10,
+    "quantum_time": 0.5,
+    "classical_time": 5.0,
+    "speedup_factor": 10.0,
+    "accuracy": 0.9,
+    "success_rate": 0.8,
+    "provider": "test",
+    "timestamp": 1758813791.0688376,
+    "metadata": {
+      "persistent": true
+    }
+  },
+  {
+    "experiment_id": "persist_test",
+    "algorithm": "test",
+    "problem_size": 10,
+    "quantum_time": 0.5,
+    "classical_time": 5.0,
+    "speedup_factor": 10.0,
+    "accuracy": 0.9,
+    "success_rate": 0.8,
+    "provider": "test",
+    "timestamp": 1758813845.9221466,
+    "metadata": {
+      "persistent": true
+    }
+  }
+]

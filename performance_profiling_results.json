@@ -1,0 +1,1002 @@
+{
+  "memory_profiling": [
+    {
+      "scenario": "idle_system",
+      "duration": 5.00608229637146,
+      "avg_memory_mb": 42.31640625,
+      "max_memory_mb": 42.31640625,
+      "min_memory_mb": 42.31640625,
+      "memory_variance": 0.0,
+      "system_memory_percent": 67.3,
+      "memory_samples": [
+        42.31640625,
+        42.31640625,
+        42.31640625,
+        42.31640625,
+        42.31640625
+      ],
+      "top_memory_consumers": [
+        {
+          "file": "/usr/lib/python3/dist-packages/psutil/_pslinux.py",
+          "line": 432,
+          "size_mb": 0.00048828125,
+          "count": 16
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 94,
+          "size_mb": 0.00045013427734375,
+          "count": 2
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 106,
+          "size_mb": 0.00029754638671875,
+          "count": 2
+        },
+        {
+          "file": "/usr/lib/python3.12/asyncio/events.py",
+          "line": 88,
+          "size_mb": 0.0002899169921875,
+          "count": 3
+        },
+        {
+          "file": "<string>",
+          "line": 1,
+          "size_mb": 0.0002593994140625,
+          "count": 2
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 116,
+          "size_mb": 0.000152587890625,
+          "count": 5
+        },
+        {
+          "file": "/usr/lib/python3.12/asyncio/base_events.py",
+          "line": 449,
+          "size_mb": 0.0001373291015625,
+          "count": 1
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 85,
+          "size_mb": 9.918212890625e-05,
+          "count": 2
+        },
+        {
+          "file": "/usr/lib/python3.12/asyncio/base_events.py",
+          "line": 815,
+          "size_mb": 9.918212890625e-05,
+          "count": 1
+        },
+        {
+          "file": "/usr/lib/python3.12/threading.py",
+          "line": 135,
+          "size_mb": 9.1552734375e-05,
+          "count": 2
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "scenario": "light_load",
+      "duration": 5.033513069152832,
+      "avg_memory_mb": 42.31640625,
+      "max_memory_mb": 42.31640625,
+      "min_memory_mb": 42.31640625,
+      "memory_variance": 0.0,
+      "system_memory_percent": 67.7,
+      "memory_samples": [
+        42.31640625,
+        42.31640625,
+        42.31640625,
+        42.31640625,
+        42.31640625,
+        42.31640625,
+        42.31640625,
+        42.31640625,
+        42.31640625,
+        42.31640625
+      ],
+      "top_memory_consumers": [
+        {
+          "file": "<frozen importlib._bootstrap_external>",
+          "line": 753,
+          "size_mb": 0.1430835723876953,
+          "count": 1220
+        },
+        {
+          "file": "<frozen abc>",
+          "line": 106,
+          "size_mb": 0.03119182586669922,
+          "count": 114
+        },
+        {
+          "file": "/usr/lib/python3.12/asyncio/locks.py",
+          "line": 167,
+          "size_mb": 0.02826690673828125,
+          "count": 78
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/anyio/_core/_synchronization.py",
+          "line": 107,
+          "size_mb": 0.014495849609375,
+          "count": 40
+        },
+        {
+          "file": "<frozen abc>",
+          "line": 123,
+          "size_mb": 0.011422157287597656,
+          "count": 124
+        },
+        {
+          "file": "/usr/lib/python3.12/asyncio/selector_events.py",
+          "line": 798,
+          "size_mb": 0.0072479248046875,
+          "count": 20
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/anyio/_backends/_asyncio.py",
+          "line": 1122,
+          "size_mb": 0.0072479248046875,
+          "count": 20
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpcore/_models.py",
+          "line": 72,
+          "size_mb": 0.00687408447265625,
+          "count": 135
+        },
+        {
+          "file": "/usr/lib/python3.12/_weakrefset.py",
+          "line": 88,
+          "size_mb": 0.0061492919921875,
+          "count": 26
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_models.py",
+          "line": 80,
+          "size_mb": 0.00604248046875,
+          "count": 104
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "scenario": "medium_load",
+      "duration": 4.783576726913452,
+      "avg_memory_mb": 45.19140625,
+      "max_memory_mb": 45.19140625,
+      "min_memory_mb": 45.19140625,
+      "memory_variance": 0.0,
+      "system_memory_percent": 67.4,
+      "memory_samples": [
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625,
+        45.19140625
+      ],
+      "top_memory_consumers": [
+        {
+          "file": "<frozen importlib._bootstrap_external>",
+          "line": 753,
+          "size_mb": 0.1430835723876953,
+          "count": 1220
+        },
+        {
+          "file": "/usr/lib/python3.12/asyncio/locks.py",
+          "line": 167,
+          "size_mb": 0.11234283447265625,
+          "count": 310
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_models.py",
+          "line": 80,
+          "size_mb": 0.086151123046875,
+          "count": 1479
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/h11/_util.py",
+          "line": 92,
+          "size_mb": 0.05132293701171875,
+          "count": 1239
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_utils.py",
+          "line": 42,
+          "size_mb": 0.04866600036621094,
+          "count": 1215
+        },
+        {
+          "file": "<frozen abc>",
+          "line": 106,
+          "size_mb": 0.03119182586669922,
+          "count": 114
+        },
+        {
+          "file": "/usr/lib/python3.12/_weakrefset.py",
+          "line": 88,
+          "size_mb": 0.0276641845703125,
+          "count": 52
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_transports/default.py",
+          "line": 370,
+          "size_mb": 0.0247955322265625,
+          "count": 270
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_client.py",
+          "line": 357,
+          "size_mb": 0.02471923828125,
+          "count": 279
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 193,
+          "size_mb": 0.0245819091796875,
+          "count": 537
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "scenario": "heavy_load",
+      "duration": 4.717175483703613,
+      "avg_memory_mb": 48.8984375,
+      "max_memory_mb": 48.8984375,
+      "min_memory_mb": 48.8984375,
+      "memory_variance": 0.0,
+      "system_memory_percent": 68.4,
+      "memory_samples": [
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375,
+        48.8984375
+      ],
+      "top_memory_consumers": [
+        {
+          "file": "/usr/lib/python3.12/asyncio/locks.py",
+          "line": 167,
+          "size_mb": 0.2971649169921875,
+          "count": 820
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_models.py",
+          "line": 80,
+          "size_mb": 0.25634765625,
+          "count": 4400
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/h11/_util.py",
+          "line": 92,
+          "size_mb": 0.14951324462890625,
+          "count": 3619
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_utils.py",
+          "line": 42,
+          "size_mb": 0.144195556640625,
+          "count": 3600
+        },
+        {
+          "file": "<frozen importlib._bootstrap_external>",
+          "line": 753,
+          "size_mb": 0.14045143127441406,
+          "count": 1201
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpcore/_models.py",
+          "line": 72,
+          "size_mb": 0.1312255859375,
+          "count": 2400
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpcore/_async/http11.py",
+          "line": 205,
+          "size_mb": 0.07458114624023438,
+          "count": 400
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_transports/default.py",
+          "line": 370,
+          "size_mb": 0.0732421875,
+          "count": 800
+        },
+        {
+          "file": "/usr/lib/python3.12/_weakrefset.py",
+          "line": 88,
+          "size_mb": 0.0709228515625,
+          "count": 107
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_client.py",
+          "line": 357,
+          "size_mb": 0.0701904296875,
+          "count": 800
+        }
+      ],
+      "status": "passed"
+    },
+    {
+      "scenario": "stress_test",
+      "duration": 5.691495418548584,
+      "avg_memory_mb": 57.19921875,
+      "max_memory_mb": 57.19921875,
+      "min_memory_mb": 57.19921875,
+      "memory_variance": 0.0,
+      "system_memory_percent": 68.1,
+      "memory_samples": [
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875,
+        57.19921875
+      ],
+      "top_memory_consumers": [
+        {
+          "file": "/usr/lib/python3.12/asyncio/locks.py",
+          "line": 167,
+          "size_mb": 1.0944366455078125,
+          "count": 3020
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_models.py",
+          "line": 80,
+          "size_mb": 0.9613037109375,
+          "count": 16500
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpcore/_async/http11.py",
+          "line": 205,
+          "size_mb": 0.7027473449707031,
+          "count": 1500
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/h11/_util.py",
+          "line": 92,
+          "size_mb": 0.5589256286621094,
+          "count": 13519
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_utils.py",
+          "line": 42,
+          "size_mb": 0.5407333374023438,
+          "count": 13500
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpcore/_models.py",
+          "line": 72,
+          "size_mb": 0.492095947265625,
+          "count": 9000
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_transports/default.py",
+          "line": 370,
+          "size_mb": 0.274658203125,
+          "count": 3000
+        },
+        {
+          "file": "/home/x0tta6bl4/.local/lib/python3.12/site-packages/httpx/_client.py",
+          "line": 357,
+          "size_mb": 0.26309967041015625,
+          "count": 2999
+        },
+        {
+          "file": "/usr/lib/python3.12/_weakrefset.py",
+          "line": 88,
+          "size_mb": 0.211181640625,
+          "count": 307
+        },
+        {
+          "file": "/usr/lib/python3.12/contextlib.py",
+          "line": 105,
+          "size_mb": 0.18550872802734375,
+          "count": 1628
+        }
+      ],
+      "status": "passed"
+    }
+  ],
+  "cpu_profiling": [
+    {
+      "scenario": "idle_cpu",
+      "duration": 5.005451917648315,
+      "avg_cpu_percent": 0.0,
+      "max_cpu_percent": 0.0,
+      "min_cpu_percent": 0.0,
+      "cpu_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cpu_profile": [
+        "         174 function calls (173 primitive calls) in 0.001 seconds",
+        "",
+        "   Ordered by: cumulative time",
+        "   List reduced from 85 to 10 due to restriction <10>",
+        "",
+        "   ncalls  tottime  percall  cumtime  percall filename:lineno(function)",
+        "      3/2    0.000    0.000    0.001    0.000 /usr/lib/python3.12/asyncio/base_events.py:1910(_run_once)",
+        "        2    0.000    0.000    0.001    0.000 /usr/lib/python3.12/selectors.py:451(select)",
+        "        1    0.000    0.000    0.001    0.001 /usr/lib/python3.12/concurrent/futures/thread.py:53(run)",
+        "        1    0.001    0.001    0.001    0.001 /home/x0tta6bl4-unified/performance_profiling_test.py:340(cpu_work)",
+        "        4    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/events.py:86(_run)",
+        "        4    0.000    0.000    0.000    0.000 {method 'run' of '_contextvars.Context' objects}",
+        "        2    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:338(cpu_intensive_task)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/base_events.py:849(run_in_executor)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/concurrent/futures/_base.py:537(set_result)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/concurrent/futures/thread.py:164(submit)",
+        "",
+        "",
+        ""
+      ],
+      "status": "passed"
+    },
+    {
+      "scenario": "light_cpu_load",
+      "duration": 5.012519359588623,
+      "avg_cpu_percent": 0.0,
+      "max_cpu_percent": 0.0,
+      "min_cpu_percent": 0.0,
+      "cpu_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cpu_profile": [
+        "         194 function calls (193 primitive calls) in 0.001 seconds",
+        "",
+        "   Ordered by: cumulative time",
+        "   List reduced from 87 to 10 due to restriction <10>",
+        "",
+        "   ncalls  tottime  percall  cumtime  percall filename:lineno(function)",
+        "      3/2    0.000    0.000    0.001    0.000 /usr/lib/python3.12/asyncio/base_events.py:1910(_run_once)",
+        "        2    0.000    0.000    0.001    0.000 /usr/lib/python3.12/selectors.py:451(select)",
+        "        1    0.000    0.000    0.001    0.001 /usr/lib/python3.12/concurrent/futures/thread.py:53(run)",
+        "        1    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:340(cpu_work)",
+        "        4    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/events.py:86(_run)",
+        "        4    0.000    0.000    0.000    0.000 {method 'run' of '_contextvars.Context' objects}",
+        "        2    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:338(cpu_intensive_task)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/base_events.py:849(run_in_executor)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/concurrent/futures/_base.py:537(set_result)",
+        "        1    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:727(main)",
+        "",
+        "",
+        ""
+      ],
+      "status": "passed"
+    },
+    {
+      "scenario": "medium_cpu_load",
+      "duration": 6.036482810974121,
+      "avg_cpu_percent": 0.0,
+      "max_cpu_percent": 0.0,
+      "min_cpu_percent": 0.0,
+      "cpu_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cpu_profile": [
+        "         234 function calls (233 primitive calls) in 0.001 seconds",
+        "",
+        "   Ordered by: cumulative time",
+        "   List reduced from 87 to 10 due to restriction <10>",
+        "",
+        "   ncalls  tottime  percall  cumtime  percall filename:lineno(function)",
+        "      3/2    0.000    0.000    0.001    0.000 /usr/lib/python3.12/asyncio/base_events.py:1910(_run_once)",
+        "        2    0.000    0.000    0.001    0.000 /usr/lib/python3.12/selectors.py:451(select)",
+        "        1    0.000    0.000    0.001    0.001 /usr/lib/python3.12/concurrent/futures/thread.py:53(run)",
+        "        1    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:340(cpu_work)",
+        "        4    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/events.py:86(_run)",
+        "        4    0.000    0.000    0.000    0.000 {method 'run' of '_contextvars.Context' objects}",
+        "        2    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:338(cpu_intensive_task)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/base_events.py:849(run_in_executor)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/concurrent/futures/_base.py:537(set_result)",
+        "        1    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:727(main)",
+        "",
+        "",
+        ""
+      ],
+      "status": "passed"
+    },
+    {
+      "scenario": "heavy_cpu_load",
+      "duration": 6.092196941375732,
+      "avg_cpu_percent": 0.0,
+      "max_cpu_percent": 0.0,
+      "min_cpu_percent": 0.0,
+      "cpu_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cpu_profile": [
+        "         294 function calls (293 primitive calls) in 0.001 seconds",
+        "",
+        "   Ordered by: cumulative time",
+        "   List reduced from 87 to 10 due to restriction <10>",
+        "",
+        "   ncalls  tottime  percall  cumtime  percall filename:lineno(function)",
+        "      3/2    0.000    0.000    0.001    0.000 /usr/lib/python3.12/asyncio/base_events.py:1910(_run_once)",
+        "        2    0.000    0.000    0.000    0.000 /usr/lib/python3.12/selectors.py:451(select)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/concurrent/futures/thread.py:53(run)",
+        "        1    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:340(cpu_work)",
+        "        4    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/events.py:86(_run)",
+        "        4    0.000    0.000    0.000    0.000 {method 'run' of '_contextvars.Context' objects}",
+        "        2    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:338(cpu_intensive_task)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/base_events.py:849(run_in_executor)",
+        "        1    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:727(main)",
+        "        1    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:41(run_performance_profiling)",
+        "",
+        "",
+        ""
+      ],
+      "status": "passed"
+    },
+    {
+      "scenario": "cpu_stress_test",
+      "duration": 6.3348305225372314,
+      "avg_cpu_percent": 0.0,
+      "max_cpu_percent": 0.0,
+      "min_cpu_percent": 0.0,
+      "cpu_samples": [
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0,
+        0.0
+      ],
+      "cpu_profile": [
+        "         474 function calls (473 primitive calls) in 0.001 seconds",
+        "",
+        "   Ordered by: cumulative time",
+        "   List reduced from 87 to 10 due to restriction <10>",
+        "",
+        "   ncalls  tottime  percall  cumtime  percall filename:lineno(function)",
+        "      3/2    0.000    0.000    0.001    0.000 /usr/lib/python3.12/asyncio/base_events.py:1910(_run_once)",
+        "        2    0.000    0.000    0.001    0.000 /usr/lib/python3.12/selectors.py:451(select)",
+        "        1    0.000    0.000    0.001    0.001 /usr/lib/python3.12/concurrent/futures/thread.py:53(run)",
+        "        1    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:340(cpu_work)",
+        "        4    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/events.py:86(_run)",
+        "        4    0.000    0.000    0.000    0.000 {method 'run' of '_contextvars.Context' objects}",
+        "        2    0.000    0.000    0.000    0.000 /home/x0tta6bl4-unified/performance_profiling_test.py:338(cpu_intensive_task)",
+        "      150    0.000    0.000    0.000    0.000 /usr/lib/python3.12/_weakrefset.py:39(_remove)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/asyncio/base_events.py:849(run_in_executor)",
+        "        1    0.000    0.000    0.000    0.000 /usr/lib/python3.12/concurrent/futures/_base.py:537(set_result)",
+        "",
+        "",
+        ""
+      ],
+      "status": "passed"
+    }
+  ],
+  "memory_leak_tests": [
+    {
+      "scenario": "short_lifecycle",
+      "total_memory_growth_mb": 0.01496124267578125,
+      "top_memory_leaks": [
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 422,
+          "size_diff_mb": 0.0140380859375,
+          "count_diff": 160
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 560,
+          "size_diff_mb": 0.00031280517578125,
+          "count_diff": 3
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 423,
+          "size_diff_mb": 0.00030517578125,
+          "count_diff": 3
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 420,
+          "size_diff_mb": 6.866455078125e-05,
+          "count_diff": 1
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 312,
+          "size_diff_mb": 6.866455078125e-05,
+          "count_diff": 1
+        }
+      ],
+      "leak_detected": false,
+      "status": "passed"
+    },
+    {
+      "scenario": "long_running_operations",
+      "total_memory_growth_mb": 0.01581573486328125,
+      "top_memory_leaks": [
+        {
+          "file": "/usr/lib/python3.12/asyncio/base_events.py",
+          "line": 449,
+          "size_diff_mb": 0.0092926025390625,
+          "count_diff": 81
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 430,
+          "size_diff_mb": 0.00482177734375,
+          "count_diff": 79
+        },
+        {
+          "file": "/usr/lib/python3.12/asyncio/events.py",
+          "line": 88,
+          "size_diff_mb": 0.00040435791015625,
+          "count_diff": 5
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 560,
+          "size_diff_mb": 0.00023651123046875,
+          "count_diff": 2
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 423,
+          "size_diff_mb": 0.00023651123046875,
+          "count_diff": 2
+        }
+      ],
+      "leak_detected": false,
+      "status": "passed"
+    },
+    {
+      "scenario": "cyclic_references",
+      "total_memory_growth_mb": 0.004619598388671875,
+      "top_memory_leaks": [
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 436,
+          "size_diff_mb": 0.002727508544921875,
+          "count_diff": 16
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 444,
+          "size_diff_mb": 0.00032806396484375,
+          "count_diff": 3
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 442,
+          "size_diff_mb": 0.00029754638671875,
+          "count_diff": 2
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 443,
+          "size_diff_mb": 0.0002899169921875,
+          "count_diff": 2
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 560,
+          "size_diff_mb": 0.00022125244140625,
+          "count_diff": 2
+        }
+      ],
+      "leak_detected": false,
+      "status": "passed"
+    },
+    {
+      "scenario": "large_object_creation",
+      "total_memory_growth_mb": 0.00067901611328125,
+      "top_memory_leaks": [
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 560,
+          "size_diff_mb": 0.0002593994140625,
+          "count_diff": 3
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 423,
+          "size_diff_mb": 0.00020599365234375,
+          "count_diff": 2
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 451,
+          "size_diff_mb": 6.866455078125e-05,
+          "count_diff": 1
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 558,
+          "size_diff_mb": 5.340576171875e-05,
+          "count_diff": 1
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 313,
+          "size_diff_mb": 4.57763671875e-05,
+          "count_diff": 1
+        }
+      ],
+      "leak_detected": false,
+      "status": "passed"
+    },
+    {
+      "scenario": "garbage_collection_test",
+      "total_memory_growth_mb": 0.0409393310546875,
+      "top_memory_leaks": [
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 464,
+          "size_diff_mb": 0.017547607421875,
+          "count_diff": 200
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 463,
+          "size_diff_mb": 0.017547607421875,
+          "count_diff": 200
+        },
+        {
+          "file": "/home/x0tta6bl4-unified/performance_profiling_test.py",
+          "line": 466,
+          "size_diff_mb": 0.005340576171875,
+          "count_diff": 100
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 560,
+          "size_diff_mb": 0.00019073486328125,
+          "count_diff": 2
+        },
+        {
+          "file": "/usr/lib/python3.12/tracemalloc.py",
+          "line": 423,
+          "size_diff_mb": 0.00019073486328125,
+          "count_diff": 2
+        }
+      ],
+      "leak_detected": false,
+      "status": "passed"
+    }
+  ],
+  "performance_benchmarks": [
+    {
+      "benchmark": "api_response_time",
+      "duration": 0.05435943603515625,
+      "metrics": {
+        "avg_response_time": 0.0005432343482971191,
+        "min_response_time": 0.0004737377166748047,
+        "max_response_time": 0.0016276836395263672,
+        "p95_response_time": 0.0006132125854492188
+      },
+      "status": "passed"
+    },
+    {
+      "benchmark": "concurrent_requests",
+      "duration": 0.04971194267272949,
+      "metrics": {
+        "concurrency_1": {
+          "total_time": 0.0005333423614501953,
+          "requests_per_second": 1874.968261063925
+        },
+        "concurrency_5": {
+          "total_time": 0.0032241344451904297,
+          "requests_per_second": 1550.8038157213637
+        },
+        "concurrency_10": {
+          "total_time": 0.005721330642700195,
+          "requests_per_second": 1747.8451473100804
+        },
+        "concurrency_20": {
+          "total_time": 0.011200189590454102,
+          "requests_per_second": 1785.684058156119
+        },
+        "concurrency_50": {
+          "total_time": 0.02902388572692871,
+          "requests_per_second": 1722.7190208239208
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "benchmark": "memory_allocation_rate",
+      "duration": 0.4630856513977051,
+      "metrics": {
+        "size_1000": {
+          "allocation_time": 0.00018358230590820312,
+          "allocation_rate": 5447148.051948052
+        },
+        "size_10000": {
+          "allocation_time": 0.0006792545318603516,
+          "allocation_rate": 1472202.1762021761
+        },
+        "size_100000": {
+          "allocation_time": 0.0325927734375,
+          "allocation_rate": 30681.647940074905
+        },
+        "size_1000000": {
+          "allocation_time": 0.3770723342895508,
+          "allocation_rate": 2652.011057464927
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "benchmark": "cpu_intensive_operations",
+      "duration": 0.004869699478149414,
+      "metrics": {
+        "operations_1000": {
+          "execution_time": 4.0531158447265625e-05,
+          "operations_per_second": 24672376.470588237
+        },
+        "operations_10000": {
+          "execution_time": 0.0004749298095703125,
+          "operations_per_second": 21055742.97188755
+        },
+        "operations_100000": {
+          "execution_time": 0.004345417022705078,
+          "operations_per_second": 23012751.01503347
+        }
+      },
+      "status": "passed"
+    },
+    {
+      "benchmark": "io_operations",
+      "duration": 0.008941411972045898,
+      "metrics": {
+        "io_ops_10": {
+          "total_time": 0.0012371540069580078,
+          "ops_per_second": 8083.068028521873
+        },
+        "io_ops_50": {
+          "total_time": 0.0013968944549560547,
+          "ops_per_second": 35793.6849291688
+        },
+        "io_ops_100": {
+          "total_time": 0.0021240711212158203,
+          "ops_per_second": 47079.4028510495
+        },
+        "io_ops_500": {
+          "total_time": 0.004175662994384766,
+          "ops_per_second": 119741.4639716798
+        }
+      },
+      "status": "passed"
+    }
+  ],
+  "summary": {
+    "total_tests": 20,
+    "passed_tests": 20,
+    "warning_tests": 0,
+    "failed_tests": 0,
+    "memory_analysis": {
+      "average_memory_usage": 47.184375,
+      "peak_memory_usage": 57.19921875,
+      "memory_efficiency": "good"
+    },
+    "cpu_analysis": {
+      "average_cpu_usage": 0.0,
+      "peak_cpu_usage": 0.0,
+      "cpu_efficiency": "good"
+    },
+    "leak_analysis": {
+      "leaks_detected": 0,
+      "total_scenarios": 5,
+      "leak_percentage": 0.0
+    },
+    "benchmark_analysis": {
+      "api_performance": {
+        "avg_response_time": 0.0005432343482971191,
+        "min_response_time": 0.0004737377166748047,
+        "max_response_time": 0.0016276836395263672,
+        "p95_response_time": 0.0006132125854492188
+      }
+    },
+    "recommendations": [
+      "Производительность системы находится в приемлемых пределах"
+    ],
+    "total_profiling_time": 55.77764368057251,
+    "timestamp": "2025-09-25T20:09:48.396006"
+  }
+}

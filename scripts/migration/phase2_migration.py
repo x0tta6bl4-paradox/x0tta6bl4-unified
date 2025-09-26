@@ -220,19 +220,19 @@ class Phase2Migration:
 QUANTUM_PROVIDERS = {
     "ibm": {
         "enabled": True,
-        "api_key": "your_ibm_api_key",
+        "api_key": os.getenv("IBM_QUANTUM_API_KEY"),
         "hub": "ibm-q",
         "group": "open",
         "project": "main"
     },
     "google": {
         "enabled": True,
-        "project_id": "your_google_project",
+        "project_id": os.getenv("GOOGLE_PROJECT_ID"),
         "location": "us-central1"
     },
     "xanadu": {
         "enabled": True,
-        "api_key": "your_xanadu_api_key"
+        "api_key": os.getenv("XANADU_API_KEY")
     }
 }
 
@@ -685,18 +685,18 @@ async def process_payment(subscription_id: str, amount: float):
 BILLING_PROVIDERS = {
     "stripe": {
         "enabled": True,
-        "public_key": "pk_test_...",
-        "secret_key": "sk_test_..."
+        "public_key": os.getenv("STRIPE_PUBLIC_KEY"),
+        "secret_key": os.getenv("STRIPE_SECRET_KEY")
     },
     "paypal": {
         "enabled": True,
-        "client_id": "your_paypal_client_id",
-        "client_secret": "your_paypal_client_secret"
+        "client_id": os.getenv("PAYPAL_CLIENT_ID"),
+        "client_secret": os.getenv("PAYPAL_CLIENT_SECRET")
     },
     "yookassa": {
         "enabled": True,
-        "shop_id": "your_shop_id",
-        "secret_key": "your_secret_key"
+        "shop_id": os.getenv("YOOKASSA_SHOP_ID"),
+        "secret_key": os.getenv("YOOKASSA_SECRET_KEY")
     }
 }
 

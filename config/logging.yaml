@@ -1,0 +1,72 @@
+version: 1
+disable_existing_loggers: false
+
+formatters:
+  standard:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(message)s'
+  detailed:
+    format: '%(asctime)s - %(name)s - %(levelname)s - %(funcName)s:%(lineno)d - %(message)s'
+  json:
+    class: pythonjsonlogger.jsonlogger.JsonFormatter
+    format: '%(asctime)s %(name)s %(levelname)s %(funcName)s %(lineno)d %(message)s'
+
+handlers:
+  console:
+    class: logging.StreamHandler
+    level: DEBUG
+    formatter: standard
+    stream: ext://sys.stdout
+
+  file:
+    class: logging.handlers.RotatingFileHandler
+    level: INFO
+    formatter: detailed
+    filename: logs/x0tta6bl4.log
+    maxBytes: 10485760  # 10MB
+    backupCount: 5
+
+  error_file:
+    class: logging.handlers.RotatingFileHandler
+    level: ERROR
+    formatter: json
+    filename: logs/errors.log
+    maxBytes: 10485760  # 10MB
+    backupCount: 5
+
+  quantum_file:
+    class: logging.handlers.RotatingFileHandler
+    level: DEBUG
+    formatter: detailed
+    filename: logs/quantum.log
+    maxBytes: 10485760  # 10MB
+    backupCount: 3
+
+loggers:
+  x0tta6bl4:
+    level: DEBUG
+    handlers: [console, file, error_file]
+    propagate: no
+
+  x0tta6bl4.quantum:
+    level: DEBUG
+    handlers: [console, quantum_file]
+    propagate: no
+
+  x0tta6bl4.ai:
+    level: INFO
+    handlers: [console, file]
+    propagate: no
+
+  x0tta6bl4.enterprise:
+    level: INFO
+    handlers: [console, file]
+    propagate: no
+
+  x0tta6bl4.billing:
+    level: WARNING
+    handlers: [console, file, error_file]
+    propagate: no
+
+root:
+  level: INFO
+  handlers: [console, file]

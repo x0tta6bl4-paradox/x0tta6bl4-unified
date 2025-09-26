@@ -1,0 +1,44 @@
+# Dockerfile for x0tta6bl4 backup service
+# Docker образ для сервиса резервного копирования x0tta6bl4
+
+FROM alpine:latest
+
+# Install required packages
+RUN apk add --no-cache \
+    postgresql-client \
+    redis \
+    bash \
+    curl \
+    gzip \
+    cron \
+    docker-cli \
+    && rm -rf /var/cache/apk/*
+
+# Create backup user
+RUN addgroup -g 1000 backup && \
+    adduser -D -s /bin/bash -u 1000 -G backup backup
+
+# Create necessary directories
+RUN mkdir -p /backups /scripts /logs && \
+    chown -R backup:backup /backups /scripts /logs
+
+# Copy backup scripts
+COPY scripts/backup/ /scripts/
+RUN chmod +x /scripts/*.sh
+
+# Create cron job for automated backups
+RUN echo "0 2 * * * /scripts/full_backup.sh >> /logs/cron.log 2>&1" > /etc/crontabs/backup && \
+    echo "0 */6 * * * /scripts/test_backup_restore.sh >> /logs/cron.log 2>&1" >> /etc/crontabs/backup
+
+# Set working directory
+WORKDIR /backups
+
+# Switch to backup user
+USER backup
+
+# Health check
+HEALTHCHECK --interval=30s --timeout=10s --start-period=5s --retries=3 \
+    CMD test -f /backups/metrics.prom && echo "Backup service healthy" || exit 1
+
+# Default command - run cron in foreground
+CMD ["crond", "-f", "-l", "8"]
